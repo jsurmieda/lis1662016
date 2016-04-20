@@ -1,0 +1,20 @@
+.navbar .brand {
+    max-height: 40px;
+    overflow: visible;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.carousel-inner{
+	width:100%;
+	max-height: 500px;
+}
+
+.midcarousel{
+	position: relative;  
+	top: 0;  
+	bottom: 0;  
+	left: 0;  
+	right: 0;  
+	margin: 0 auto;
+}
