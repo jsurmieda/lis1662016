@@ -10,7 +10,7 @@
     <title>NCIP Website</title>
 
   <!--favicon-->
-    <link rel="shortcut icon" href="{{{ asset('ncip.ico') }}}">  
+    <link rel="shortcut icon" href="{{{ asset('ncip.ico') }}}">
 
 	<!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -79,14 +79,16 @@
                         	<a class="page-scroll" href="#about">About Us</a>
                         </li>
                         <li>
-                        	<a href="#">News</a>
+                          <a class="page-scroll" href="#offices">Offices</a>
                         </li>
                         <li>
-                        	<a class="page-scroll" href="#service">Services</a>
+                          <a class="page-scroll" href="#service">Services</a>
                         </li>
+                        <li class="nav-divider"></li>
                         <li>
-                        	<a class="page-scroll" href="#offices">Offices</a>
+                        	<a href="#recent-works">News</a>
                         </li>
+                        <li class="pipes"> | </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
