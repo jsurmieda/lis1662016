@@ -86,7 +86,7 @@
                         </li>
                         <li class="nav-divider"></li>
                         <li>
-                        	<a href="#recent-works">News</a>
+                        	<a class="page-scroll" href="#recent-works">News</a>
                         </li>
                         <li class="pipes"> | </li>
                         <li class="dropdown">

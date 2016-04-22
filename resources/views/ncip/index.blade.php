@@ -16,7 +16,7 @@
                                 <div class="carousel-content">
                                     <h1 class="animation animated-item-1">Lumads get displaced from AD</h1>
                                     <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3"  ef="#">Read More</a>
+                                    <a class="btn-slide animation animated-item-3"  href="#">Read More</a>
                                 </div>
                             </div>
 
@@ -37,7 +37,7 @@
                                 <div class="carousel-content">
                                     <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
                                     <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3"  ef="#">Read More</a>
+                                    <a class="btn-slide animation animated-item-3"  href="#">Read More</a>
                                 </div>
                             </div>
 
@@ -58,7 +58,7 @@
                                 <div class="carousel-content">
                                     <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
                                     <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3"  ef="#">Read More</a>
+                                    <a class="btn-slide animation animated-item-3"  href="#">Read More</a>
                                 </div>
                             </div>
                             <div class="col-sm-6 hidden-xs animation animated-item-4">
@@ -137,8 +137,63 @@
                     </div><!--/.col-md-4-->
                 </div><!--/.services-->
             </div><!--/.row-->
+						<div class="center wow fadeInDown">
+								<br>
+								<a type="button" class="btn btn-danger" href="#offices">Read More</a>
+						 </div>
         </div><!--/.container-->
     </section><!--/#feature-->
+
+		<section id="offices" class="section-pad">
+			 <div class="container">
+						<div class="center wow fadeInDown">
+								<h2>Our Offices</h2>
+								<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+						</div>
+
+						<div class="row">
+								<div class="col-sm-6 col-md-4">
+										<div class="media services-wrap wow fadeInDown">
+												<div class="pull-left">
+														<img class="img-responsive" src="images/services/services1.png">
+												</div>
+												<div class="media-body">
+														<h3 class="media-heading">CAR</h3>
+														<p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
+												</div>
+										</div>
+								</div>
+
+								<div class="col-sm-6 col-md-4">
+										<div class="media services-wrap wow fadeInDown">
+												<div class="pull-left">
+														<img class="img-responsive" src="images/services/services2.png">
+												</div>
+												<div class="media-body">
+														<h3 class="media-heading">NCR</h3>
+														<p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
+												</div>
+										</div>
+								</div>
+
+								<div class="col-sm-6 col-md-4">
+										<div class="media services-wrap wow fadeInDown">
+												<div class="pull-left">
+														<img class="img-responsive" src="images/services/services3.png">
+												</div>
+												<div class="media-body">
+														<h3 class="media-heading">ARMM</h3>
+														<p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
+												</div>
+										</div>
+								</div>
+						</div><!--/.row-->
+				</div><!--/.container-->
+				<div class="center wow fadeInDown">
+						<br>
+						<a type="button" class="btn btn-danger" href="#service">View More</a>
+				 </div>
+		</section><!--/#services-->
 
     <section id="service" class="section-pad">
         <div class="container">
@@ -217,6 +272,10 @@
                     </div><!--/.tab-wrap-->
                 </div><!--/.col-sm-6-->
             </div><!--/.row-->
+						<div class="center wow fadeInDown">
+								<br>
+								<a type="button" class="btn btn-danger" href="#service">View More</a>
+						 </div>
         </div><!--/.container-->
     </section><!--/#content-->
 
@@ -333,161 +392,9 @@
                 </div>
             </div><!--/.row-->
         </div><!--/.container-->
+				<div class="center wow fadeInDown">
+						<br>
+						<a type="button" class="btn btn-danger" href="#service">View More</a>
+				 </div>
     </section><!--/#recent-works-->
-
-    <section id="offices" class="section-pad">
-       <div class="container">
-            <div class="center wow fadeInDown">
-                <h2>Our Offices</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-            </div>
-
-            <div class="row">
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services1.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">CAR</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services2.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">NCR</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services3.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">ARMM</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services4.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Region I</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services5.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Region III</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services6.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Region IV</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services1.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Region V</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services2.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Region VI and VII</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services3.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Region VIII</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services4.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Region IX and X</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services5.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Region XI</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="media services-wrap wow fadeInDown">
-                        <div class="pull-left">
-                            <img class="img-responsive" src="images/services/services6.png">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="media-heading">Region XII</h3>
-                            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/.row-->
-        </div><!--/.container-->
-    </section><!--/#services-->
 @endsection
