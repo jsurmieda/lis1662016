@@ -8,7 +8,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>NCIP Website</title>
-	
+
+  <!--favicon-->
+    <link rel="shortcut icon" href="{{{ asset('ncip.ico') }}}">  
+
 	<!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -17,13 +20,15 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
 
 </head>
 
-<body id="homepage">
+<body id="page-top" data-spy="scroll" data-target=".second-navbar">
 
     <header id="header">
-        <div class="top-bar">
+        <div class="navbar top-bar navbar-fixed-top">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-xs-4">
@@ -34,7 +39,7 @@
                             <ul class="social-share">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                 <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                                 <li><a href="#"><i class="fa fa-skype"></i></a></li>
                             </ul>
@@ -50,35 +55,38 @@
             </div><!--/.container-->
         </div><!--/.top-bar-->
 
-        <nav class="navbar navbar-inverse" role="banner">
+        <nav class="navbar navbar-inverse navbar-fixed-top second-navbar" role="navigation">
             <div class="container">
-                <div class="navbar-header">
+                <div class="navbar-header page-scroll">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    
+
                 </div>
-				
+
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="{{ Request::is('home') ? 'active' : '' }}">
-                        	<a href="{{ url('/home') }}">Home</a>
+                        <li class="hidden">
+                          <a class="page-scroll" href="#page-top"></a>
                         </li>
-                        <li class="{{ Request::is('about') ? 'active' : '' }}">
-                        	<a href="{{ url('/about') }}">About Us</a>
+                        <li>
+                        	<a class="page-scroll" href="#page-top">Home</a>
+                        </li>
+                        <li>
+                        	<a class="page-scroll" href="#about">About Us</a>
                         </li>
                         <li>
                         	<a href="#">News</a>
                         </li>
                         <li>
-                        	<a href="#offices">Offices</a>
+                        	<a class="page-scroll" href="#service">Services</a>
                         </li>
                         <li>
-                        	<a href="#service">Services</a>
-                        </li> 
+                        	<a class="page-scroll" href="#offices">Offices</a>
+                        </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
@@ -87,12 +95,12 @@
                                 <li><a href="#">Transparency Reports</a></li>
                                 <li><a href="#">NCIP Forms</a></li>
                             </ul>
-                        </li>  
+                        </li>
                     </ul>
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
-		
+
     </header><!--/header-->
 
     @yield('content')
@@ -112,7 +120,7 @@
                             <li><a href="#">Privacy policy</a></li>
                             <li><a href="#">Contact us</a></li>
                         </ul>
-                    </div>    
+                    </div>
                 </div><!--/.col-md-3-->
 
                 <div class="col-md-3 col-sm-6">
@@ -127,7 +135,7 @@
                             <li><a href="#">Ticket system</a></li>
                             <li><a href="#">Billing system</a></li>
                         </ul>
-                    </div>    
+                    </div>
                 </div><!--/.col-md-3-->
 
                 <div class="col-md-3 col-sm-6">
@@ -142,7 +150,7 @@
                             <li><a href="#">Plugin Development</a></li>
                             <li><a href="#">Article Writing</a></li>
                         </ul>
-                    </div>    
+                    </div>
                 </div><!--/.col-md-3-->
 
                 <div class="col-md-3 col-sm-6">
@@ -157,7 +165,7 @@
                             <li><a href="#">Ullamco</a></li>
                             <li><a href="#">Laboris</a></li>
                         </ul>
-                    </div>    
+                    </div>
                 </div><!--/.col-md-3-->
             </div>
         </div>
@@ -173,7 +181,7 @@
                 	<ul class="social-share">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                      </ul>
                 </div>
@@ -195,6 +203,8 @@
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
 
 </body>
 </html>
