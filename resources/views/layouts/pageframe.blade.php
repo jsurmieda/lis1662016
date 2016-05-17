@@ -192,6 +192,7 @@
                         <li><a href="/home">Home</a></li>
                         <li><a href="#">FAQs</a></li>
                         <li><a href="#">Contact Us</a></li>
+                        <li><a href="admin.index">Admin Login</a></li>
                     </ul>
                 </div>
             </div>
