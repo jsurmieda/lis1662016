@@ -16,6 +16,7 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->string('articletitle');
             $table->string('articlebody');
+            $table->boolean('ispinned')->default(0);
             $table->integer('articletypes_id');
             $table->integer('users_id');
             $table->timestamps();
