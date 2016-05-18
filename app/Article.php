@@ -21,7 +21,7 @@ class Article extends Model
 	{
 			return $this->belongsto('App\Articletype');
 	}
-
+/* REPLACE WITH APPROPRIATE NAMES FOR USERS */
 	public function users() 
 	{
 			return $this->hasMany('App\User');
