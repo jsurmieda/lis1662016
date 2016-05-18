@@ -22,3 +22,4 @@ Route::get('/home', 'HomeController@index');
 Route::get('/about', function () {
     return view('ncip.about');
 });
+Route::get('/admin.index', 'AdminController@index');
