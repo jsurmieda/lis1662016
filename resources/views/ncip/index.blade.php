@@ -155,9 +155,10 @@
                             <div class="parrent pull-left">
                                 <ul class="nav nav-tabs nav-stacked">
                                     <li class=""><a href="#tab1" data-toggle="tab" class="analistic-01">Application to Certificate of Confirmation</a></li>
-                                    <li class="active"><a href="#tab2" data-toggle="tab" class="analistic-02">Application to Certificate of Non-overlap</a></li>
-                                    <li class=""><a href="#tab3" data-toggle="tab" class="tehnical">Application to Issuance of Consent</a></li>
-                                    <li class=""><a href="#tab4" data-toggle="tab" class="tehnical">Application to Educational Assistance Program</a></li>
+                                    <li class="active"><a href="#tab2" data-toggle="tab" class="analistic-02">Application to Certificate of Ancestral Domain Conversion</a></li>
+                                    <li class=""><a href="#tab3" data-toggle="tab" class="tehnical">Application to Certificate of Ancestral Domain Title</a></li>
+                                    <li class=""><a href="#tab4" data-toggle="tab" class="tehnical">Application to Certificate of Ancestral Land Conversion</a></li>
+                                    <li class=""><a href="#tab5" data-toggle="tab" class="tehnical">Application to Certificate of Ancestral Domain Title</a></li>
                                 </ul>
                             </div>
 
