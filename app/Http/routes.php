@@ -23,3 +23,23 @@ Route::get('/about', function () {
     return view('ncip.about');
 });
 Route::get('/admin.index', 'AdminController@index');
+
+Route::get('/forms.CADC', function () {
+    return view('forms.CADC');
+});
+
+Route::get('/forms.CADT', function () {
+    return view('forms.CADT');
+});
+
+Route::get('/forms.CALC', function () {
+    return view('forms.CALC');
+});
+
+Route::get('/forms.CALT', function () {
+    return view('forms.CALT');
+});
+
+Route::get('/forms.COC', function () {
+    return view('forms.COC');
+});

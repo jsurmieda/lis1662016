@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Unibersidad de Global</title>
+    <title>NCIP Website</title>
 
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +21,7 @@
     <link href="css/maps/jquery-jvectormap-2.0.3.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -30,7 +30,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-globe"></i> Unibersidad de Global</a>
+              <a href="index.html" class="site_title"><i class="fa fa-globe"></i> NCIP</a>
             </div>
 
             <div class="clearfix"></div>
@@ -244,7 +244,7 @@
     <script src="js/datepicker/daterangepicker.js"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="js/custom.js"></script>
+    <script src="js/custom_2.js"></script>
 
     <!-- Flot -->
     <script>
