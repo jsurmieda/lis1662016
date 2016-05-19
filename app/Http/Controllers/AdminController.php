@@ -85,4 +85,14 @@ class AdminController extends Controller
     {
         //
     }
+    public function CADC()
+    {
+        //
+        return view('forms.CADC');
+    }
+    public function CADT()
+    {
+        //
+        return view('forms.CADT');
+    }
 }
