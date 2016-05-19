@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArticletypesTable extends Migration
+class CreateCadtconditionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,12 @@ class CreateArticletypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('articletypes', function (Blueprint $table) {
+        Schema::create('cadtconditions', function(Blueprint $table) {
             $table->increments('id');
-            $table->string('typeName');
-            $table->string('typeDescription', 100);
+            $table->date('date');   
+            $table->boolean('cadteable');   
+            $table->integer('originoffice_id')->unsigned();   
+            $table->foreign('originoffice_id')->references('id')->on('originoffices')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -28,6 +30,6 @@ class CreateArticletypesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('articletypes');
+        Schema::drop('cadtconditions');
     }
 }
