@@ -95,4 +95,19 @@ class AdminController extends Controller
         //
         return view('forms.CADT');
     }
+    public function CALC()
+    {
+        //
+        return view('forms.CALC');
+    }
+    public function CALT()
+    {
+        //
+        return view('forms.CALT');
+    }
+    public function COC()
+    {
+        //
+        return view('forms.COC');
+    }
 }
