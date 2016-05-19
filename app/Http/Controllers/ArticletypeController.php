@@ -6,22 +6,16 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-
-class AdminController extends Controller
+class ArticletypeController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     public function index()
     {
         //
-        return view('admin.index');
     }
 
     /**
@@ -88,30 +82,5 @@ class AdminController extends Controller
     public function destroy($id)
     {
         //
-    }
-    public function CADC()
-    {
-        //
-        return view('forms.CADC');
-    }
-    public function CADT()
-    {
-        //
-        return view('forms.CADT');
-    }
-    public function CALC()
-    {
-        //
-        return view('forms.CALC');
-    }
-    public function CALT()
-    {
-        //
-        return view('forms.CALT');
-    }
-    public function COC()
-    {
-        //
-        return view('forms.COC');
     }
 }

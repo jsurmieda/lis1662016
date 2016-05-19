@@ -16,30 +16,30 @@ class Practi extends Migration
 		Schema::create('relationships', function (Blueprint $table) {
 			$table->increments('id');
 			$table->string('rel_type');
-			$table->timestamp('deleted_at');
-            $table->timestamps();
+			$table->timestamps();
+            $table->softDeletes();
 			 });	 
 			 
 		Schema::create('case_types', function (Blueprint $table) {
 			$table->increments('id');
             $table->string('case_type_name');   
-            $table->timestamp('deleted_at');
             $table->timestamps();
+            $table->softDeletes();
 			 });
 
 
 		Schema::create('note_qualifiers', function (Blueprint $table) {
 			$table->increments('id');
             $table->string('note_type');
-            $table->timestamp('deleted_at');
             $table->timestamps();
+            $table->softDeletes();
 			 });
 			
 		Schema::create('origin_offices', function (Blueprint $table) {
 			$table->increments('id');	//each csc is described by unique integer primary key
             $table->string('csc_name');
- 			$table->timestamp('deleted_at');
-            $table->timestamps();
+ 			$table->timestamps();
+            $table->softDeletes();
 			 });
 			 
 		Schema::create('cadt_conditions', function(Blueprint $table)   {
@@ -48,8 +48,8 @@ class Practi extends Migration
             $table->boolean('cadteable');   
             $table->integer('origin_office_id')->unsigned();   
 			$table->foreign('origin_office_id')->references('id')->on('origin_offices')->onUpdate('cascade')->onDelete('cascade');
-			$table->timestamp('deleted_at');
-            $table->timestamps();
+			$table->timestamps();
+            $table->softDeletes();
 			});
 			 
 		Schema::create('case_reports', function (Blueprint $table) {
@@ -64,8 +64,8 @@ class Practi extends Migration
 			$table->foreign('case_type_id')->references('id')->on('case_types')->onUpdate('cascade')->onDelete('cascade');
 			$table->integer('origin_office_id')->unsigned();
 			$table->foreign('origin_office_id')->references('id')->on('origin_offices')->onUpdate('cascade')->onDelete('cascade');
-			$table->timestamp('deleted_at');
-            $table->timestamps();
+			$table->timestamps();
+            $table->softDeletes();
 			 });
 			 
 		Schema::create('tribes', function (Blueprint $table) {
@@ -73,8 +73,8 @@ class Practi extends Migration
             $table->string('tribe_name');
             $table->integer('cadt_condition_id')->unsigned();
 			$table->foreign('cadt_condition_id')->references('id')->on('cadt_conditions')->onUpdate('cascade')->onDelete('cascade');						
-			$table->timestamp('deleted_at');
-            $table->timestamps();
+			$table->timestamps();
+            $table->softDeletes();
 			 });
 			 
 		Schema::create('persons', function (Blueprint $table) {
@@ -86,8 +86,8 @@ class Practi extends Migration
 			$table->string('address');
             $table->integer('tribe_id')->unsigned();
 			$table->foreign('tribe_id')->references('id')->on('tribes')->onUpdate('cascade')->onDelete('cascade');			
-			$table->timestamp('deleted_at');
-            $table->timestamps();
+			$table->timestamps();
+            $table->softDeletes();
 			 });
 			 
 		Schema::create('case_descriptions', function (Blueprint $table) {
@@ -100,8 +100,8 @@ class Practi extends Migration
 			$table->foreign('case_report_id')->references('id')->on('case_reports')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('cadt_condition_id')->unsigned();
 			$table->foreign('cadt_condition_id')->references('id')->on('cadt_conditions')->onUpdate('cascade')->onDelete('cascade');			
- 			$table->timestamp('deleted_at');
-            $table->timestamps();
+ 			$table->timestamps();
+            $table->softDeletes();
 			 });
 			 
 		Schema::create('case_notes', function (Blueprint $table) {
@@ -114,8 +114,8 @@ class Practi extends Migration
 			$table->foreign('case_report_id')->references('id')->on('case_reports')->onUpdate('cascade')->onDelete('cascade');
 			$table->integer('cadt_condition_id')->unsigned();
 			$table->foreign('cadt_condition_id')->references('id')->on('cadt_conditions')->onUpdate('cascade')->onDelete('cascade');
-			$table->timestamp('deleted_at');
-            $table->timestamps();
+			$table->timestamps();
+            $table->softDeletes();
 			 });
 			 
 		Schema::create('articles', function(Blueprint $table)   {
@@ -125,8 +125,8 @@ class Practi extends Migration
             $table->string('body');
 			$table->integer('user_id')->unsigned();
 			$table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
-			$table->timestamp('deleted_at');
-            $table->timestamps();
+			$table->timestamps();
+            $table->softDeletes();
 			});
     }
 	
