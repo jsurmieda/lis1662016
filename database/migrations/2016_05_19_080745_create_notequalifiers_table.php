@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArticletypesTable extends Migration
+class CreateNotequalifiersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,9 @@ class CreateArticletypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('articletypes', function (Blueprint $table) {
+        Schema::create('notequalifiers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('typeName');
-            $table->string('typeDescription', 100);
+            $table->string('noteType');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -28,6 +27,6 @@ class CreateArticletypesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('articletypes');
+        Schema::drop('notequalifiers');
     }
 }
