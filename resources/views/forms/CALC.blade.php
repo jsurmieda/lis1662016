@@ -1,4 +1,4 @@
-@extends('layouts.adminframe')
+@extends('layouts.homeframe')
 
 @section('content')
 
