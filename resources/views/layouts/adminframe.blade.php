@@ -63,6 +63,7 @@
                     </ul>
                   </li>
                   <li><a href="{{ url('/about') }}"><i class="fa fa-user"></i> About</a></li>
+                  <li><a href="{{ url('/forms') }}"><i class="fa fa-document"></i> Forms</a></li>
                 </ul>
               </div>
             </div>
