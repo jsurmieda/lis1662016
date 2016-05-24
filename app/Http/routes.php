@@ -43,3 +43,7 @@ Route::get('/forms.CALT', function () {
 Route::get('/forms.COC', function () {
     return view('forms.COC');
 });
+
+Route::get('/forms.IncidentReport', function () {
+    return view('forms.IncidentReport');
+});

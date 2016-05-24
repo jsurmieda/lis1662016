@@ -42,6 +42,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
+                <h2>{{ Auth::user()->name }}</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -53,17 +54,24 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="{{ url('/home') }}"><i class="fa fa-home"></i> Home</a></li>
-                  <li><a><i class="fa fa-bars"></i> Lists <span class="fa fa-chevron-down"></span></a>
+                  <li><a href="{{ url('/admin.index') }}"><i class="fa fa-home"></i> Home</a></li>
+                  <li><a><i class="fa fa-archive"></i> Reports <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{ url('/department') }}">Departments</a></li>
-                      <li><a href="{{ url('/instructor') }}">Instructors</a></a></li>
-                      <li><a href="{{ url('/student') }}">Students</a></li>
-                      <li><a href="{{ url('/classes') }}">Classes</a></li>
+                      <li><a href="{{ url('/forms.IncidentReport') }}"><i class="fa fa-plus"></i>Add Incident Report</a></li>
+                      <li><a href="{{ url('/department') }}"><i class="fa fa-search"></i>View Incident Reports</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-bars"></i> Articles <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="{{ url('/department') }}"><i class="fa fa-pencil"></i>Post New Article</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-bars"></i> Administrative Menu <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="{{ url('/department') }}"><i class="fa fa-user"></i>User List</a></li>
                     </ul>
                   </li>
                   <li><a href="{{ url('/about') }}"><i class="fa fa-user"></i> About</a></li>
-                  <li><a href="{{ url('/forms') }}"><i class="fa fa-document"></i> Forms</a></li>
                 </ul>
               </div>
             </div>
@@ -104,8 +112,6 @@
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="{{ url('/') }}">  Welcome Page</a>
-                    </li>
-                    <li><a href="#">  Profile</a>
                     </li>
                     <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
                     </li>
@@ -202,7 +208,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+            National Commission for Indigent People. (c) 2016
           </div>
           <div class="clearfix"></div>
         </footer>
@@ -243,9 +249,24 @@
     <!-- bootstrap-daterangepicker -->
     <script src="js/moment/moment.min.js"></script>
     <script src="js/datepicker/daterangepicker.js"></script>
+    <script src="vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
 
     <!-- Custom Theme Scripts -->
     <script src="js/custom_2.js"></script>
+    <!-- Smart Wizard-->
+    <script>
+          $(document).ready(function() {
+            $('#wizard').smartWizard();
+
+            $('#wizard_verticle').smartWizard({
+              transitionEffect: 'slide'
+            });
+
+            $('.buttonNext').addClass('btn btn-success');
+            $('.buttonPrevious').addClass('btn btn-primary');
+            $('.buttonFinish').addClass('btn btn-default');
+          });
+        </script>
 
     <!-- Flot -->
     <script>
