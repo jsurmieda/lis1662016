@@ -55,10 +55,10 @@
                 <h3>General</h3>
                 <ul class="nav side-menu">
                   <li><a href="{{ url('/admin.index') }}"><i class="fa fa-home"></i> Home</a></li>
-                  <li><a><i class="fa fa-archive"></i> Reports <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-archive"></i>Case Reports <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{ url('/forms.IncidentReport') }}"><i class="fa fa-plus"></i>Add Incident Report</a></li>
-                      <li><a href="{{ url('/department') }}"><i class="fa fa-search"></i>View Incident Reports</a></li>
+                      <li><a href="{{ url('/department') }}"><i class="fa fa-search"></i>View Cases Reports</a></li>
+                      <li><a href="{{ url('/forms.IncidentReport') }}"><i class="fa fa-plus"></i>Add Case Report</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-bars"></i> Articles <span class="fa fa-chevron-down"></span></a>
@@ -68,7 +68,7 @@
                   </li>
                   <li><a><i class="fa fa-bars"></i> Administrative Menu <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{ url('/department') }}"><i class="fa fa-database"></i>User List</a></li>
+                      <li><a href="{{ url('/users') }}"><i class="fa fa-database"></i>Users List</a></li>
                       <li><a href="{{ url('/department') }}"><i class="fa fa-database"></i>Indigent List</a></li>
                     </ul>
                   </li>
@@ -83,7 +83,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Settings">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen" href="" onclick="return requestFullScreen();">
                 <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
               </a>
               <a data-toggle="tooltip" data-placement="top" title="Lock">
