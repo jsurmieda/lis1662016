@@ -47,3 +47,7 @@ Route::get('/forms.COC', function () {
 Route::get('/forms.IncidentReport', function () {
     return view('forms.IncidentReport');
 });
+
+Route::get('/articles.newArticle', function () {
+    return view('articles.newArticle');
+});

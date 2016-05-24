@@ -63,12 +63,13 @@
                   </li>
                   <li><a><i class="fa fa-bars"></i> Articles <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{ url('/department') }}"><i class="fa fa-pencil"></i>Post New Article</a></li>
+                      <li><a href="{{ url('/articles.newArticle') }}"><i class="fa fa-pencil"></i>Post New Article</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-bars"></i> Administrative Menu <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{ url('/department') }}"><i class="fa fa-user"></i>User List</a></li>
+                      <li><a href="{{ url('/department') }}"><i class="fa fa-database"></i>User List</a></li>
+                      <li><a href="{{ url('/department') }}"><i class="fa fa-database"></i>Indigent List</a></li>
                     </ul>
                   </li>
                   <li><a href="{{ url('/about') }}"><i class="fa fa-user"></i> About</a></li>
@@ -249,8 +250,9 @@
     <!-- bootstrap-daterangepicker -->
     <script src="js/moment/moment.min.js"></script>
     <script src="js/datepicker/daterangepicker.js"></script>
-    <script src="vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
 
+    <script src="vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+    <script src="vendors/dropzone/dist/min/dropzone.min.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="js/custom_2.js"></script>
     <!-- Smart Wizard-->
