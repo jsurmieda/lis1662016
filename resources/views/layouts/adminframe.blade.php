@@ -58,12 +58,12 @@
                   <li><a><i class="fa fa-archive"></i>Case Reports <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{ url('/department') }}"><i class="fa fa-search"></i>View Cases Reports</a></li>
-                      <li><a href="{{ url('/forms.IncidentReport') }}"><i class="fa fa-plus"></i>Add Case Report</a></li>
+                      <li><a href="{{ url('/forms.CaseReport') }}"><i class="fa fa-plus"></i>Add Case Report</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-bars"></i> Articles <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{ url('/articles.newArticle') }}"><i class="fa fa-pencil"></i>Post New Article</a></li>
+                      <li><a href="{{ url('/articles.create') }}"><i class="fa fa-pencil"></i>Post New Article</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-bars"></i> Administrative Menu <span class="fa fa-chevron-down"></span></a>

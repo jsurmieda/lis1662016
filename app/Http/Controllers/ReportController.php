@@ -83,4 +83,12 @@ class ReportController extends Controller
     {
         //
     }
+
+    /**
+     * Displays case reports
+     */
+    public function caseReports($id)
+    {
+        //
+    }
 }

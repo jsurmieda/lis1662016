@@ -44,10 +44,10 @@ Route::get('/forms.COC', function () {
     return view('forms.COC');
 });
 
-Route::get('/forms.IncidentReport', function () {
-    return view('forms.IncidentReport');
+Route::get('/forms.CaseReport', function () {
+    return view('forms.CaseReport');
 });
 
-Route::get('/articles.newArticle', function () {
-    return view('articles.newArticle');
+Route::get('/articles.create', function () {
+    return view('articles.create');
 });
