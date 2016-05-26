@@ -22,7 +22,7 @@ Route::get('/home', 'HomeController@index');
 Route::get('/about', function () {
     return view('ncip.about');
 });
-Route::get('/admin.index', 'AdminController@index');
+Route::get('/admin', 'AdminController@index');
 
 Route::get('/forms.CADC', function () {
     return view('forms.CADC');
@@ -44,10 +44,13 @@ Route::get('/forms.COC', function () {
     return view('forms.COC');
 });
 
-Route::get('/forms.CaseReport', function () {
-    return view('forms.CaseReport');
-});
-
 Route::get('/articles.create', function () {
     return view('articles.create');
+});
+/*
+ *routes for the reports resource 
+ */
+Route::group(['middleware' => 'auth'], function()
+{
+Route::resource('reports', 'ReportController');
 });

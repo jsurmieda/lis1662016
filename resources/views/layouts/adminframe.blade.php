@@ -10,18 +10,18 @@
     <title>NCIP Website</title>
 
     <!-- Bootstrap -->
-    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ asset('vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <!-- iCheck -->
-    <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="{{ asset('vendors/iCheck/skins/flat/green.css') }}" rel="stylesheet">
     <!-- bootstrap-progressbar -->
-    <link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <link href="{{ asset('vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css') }}" rel="stylesheet">
     <!-- jVectorMap -->
-    <link href="css/maps/jquery-jvectormap-2.0.3.css" rel="stylesheet">
+    <link href="{{ asset('css/maps/jquery-jvectormap-2.0.3.css') }}" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="css/admin.css" rel="stylesheet">
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -54,11 +54,11 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="{{ url('/admin.index') }}"><i class="fa fa-home"></i> Home</a></li>
+                  <li><a href="{{ url('/admin') }}"><i class="fa fa-home"></i> Home</a></li>
                   <li><a><i class="fa fa-archive"></i>Case Reports <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="{{ url('/department') }}"><i class="fa fa-search"></i>View Cases Reports</a></li>
-                      <li><a href="{{ url('/forms.CaseReport') }}"><i class="fa fa-plus"></i>Add Case Report</a></li>
+                      <li><a href="{{ url('/reports') }}"><i class="fa fa-search"></i>View Case Reports</a></li>
+                      <li><a href="{{ url('/reports/create') }}"><i class="fa fa-plus"></i>Add Case Report</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-bars"></i> Articles <span class="fa fa-chevron-down"></span></a>
@@ -209,7 +209,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            National Commission for Indigent People. (c) 2016
+            National Commission for Indigenous People. (c) 2016
           </div>
           <div class="clearfix"></div>
         </footer>
@@ -217,44 +217,44 @@
       </div>
     </div>
     <!-- jQuery -->
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="{{ asset('vendors/jquery/dist/jquery.min.js') }}"></script>
     <!-- Bootstrap -->
-    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="{{ asset('vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <!-- FastClick -->
-    <script src="vendors/fastclick/lib/fastclick.js"></script>
+    <script src="{{ asset('vendors/fastclick/lib/fastclick.js') }}"></script>
     <!-- NProgress -->
-    <script src="vendors/nprogress/nprogress.js"></script>
+    <script src="{{ asset('vendors/nprogress/nprogress.js') }}"></script>
     <!-- Chart.js -->
-    <script src="vendors/Chart.js/dist/Chart.min.js"></script>
+    <script src="{{ asset('vendors/Chart.js/dist/Chart.min.js') }}"></script>
     <!-- gauge.js -->
-    <script src="vendors/bernii/gauge.js/dist/gauge.min.js"></script>
+    <script src="{{ asset('vendors/bernii/gauge.js/dist/gauge.min.js') }}"></script>
     <!-- bootstrap-progressbar -->
-    <script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="{{ asset('vendors/bootstrap-progressbar/bootstrap-progressbar.min.js') }}"></script>
     <!-- iCheck -->
-    <script src="vendors/iCheck/icheck.min.js"></script>
+    <script src="{{ asset('vendors/iCheck/icheck.min.js') }}"></script>
     <!-- Skycons -->
-    <script src="vendors/skycons/skycons.js"></script>
+    <script src="{{ asset('vendors/skycons/skycons.js') }}"></script>
     <!-- Flot -->
-    <script src="vendors/Flot/jquery.flot.js"></script>
-    <script src="vendors/Flot/jquery.flot.pie.js"></script>
-    <script src="vendors/Flot/jquery.flot.time.js"></script>
-    <script src="vendors/Flot/jquery.flot.stack.js"></script>
-    <script src="vendors/Flot/jquery.flot.resize.js"></script>
+    <script src="{{ asset('vendors/Flot/jquery.flot.js') }}"></script>
+    <script src="{{ asset('vendors/Flot/jquery.flot.pie.js') }}"></script>
+    <script src="{{ asset('vendors/Flot/jquery.flot.time.js') }}"></script>
+    <script src="{{ asset('vendors/Flot/jquery.flot.stack.js') }}"></script>
+    <script src="{{ asset('vendors/Flot/jquery.flot.resize.js') }}"></script>
     <!-- Flot plugins -->
-    <script src="js/flot/jquery.flot.orderBars.js"></script>
-    <script src="js/flot/date.js"></script>
-    <script src="js/flot/jquery.flot.spline.js"></script>
-    <script src="js/flot/curvedLines.js"></script>
+    <script src="{{ asset('js/flot/jquery.flot.orderBars.js') }}"></script>
+    <script src="{{ asset('js/flot/date.js') }}"></script>
+    <script src="{{ asset('js/flot/jquery.flot.spline.js') }}"></script>
+    <script src="{{ asset('js/flot/curvedLines.js') }}"></script>
     <!-- jVectorMap -->
-    <script src="js/maps/jquery-jvectormap-2.0.3.min.js"></script>
+    <script src="{{ asset('js/maps/jquery-jvectormap-2.0.3.min.js') }}"></script>
     <!-- bootstrap-daterangepicker -->
-    <script src="js/moment/moment.min.js"></script>
-    <script src="js/datepicker/daterangepicker.js"></script>
+    <script src="{{ asset('js/moment/moment.min.js') }}"></script>
+    <script src="{{ asset('js/datepicker/daterangepicker.js') }}"></script>
 
-    <script src="vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
-    <script src="vendors/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="{{ asset('vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js') }}"></script>
+    <script src="{{ asset('vendors/dropzone/dist/min/dropzone.min.js') }}"></script>
     <!-- Custom Theme Scripts -->
-    <script src="js/custom_2.js"></script>
+    <script src="{{ asset('js/custom_2.js') }}"></script>
     <!-- Smart Wizard-->
     <script>
           $(document).ready(function() {
@@ -347,9 +347,9 @@
     <!-- /Flot -->
 
     <!-- jVectorMap -->
-    <script src="js/maps/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="js/maps/jquery-jvectormap-us-aea-en.js"></script>
-    <script src="js/maps/gdp-data.js"></script>
+    <script src="{{ asset('js/maps/jquery-jvectormap-world-mill-en.js') }}"></script>
+    <script src="{{ asset('js/maps/jquery-jvectormap-us-aea-en.js') }}"></script>
+    <script src="{{ asset('js/maps/gdp-data.js') }}"></script>
     <script>
       $(document).ready(function(){
         $('#world-map-gdp').vectorMap({
