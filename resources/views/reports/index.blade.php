@@ -55,9 +55,9 @@
                           <td>{!! $casereport->receiptDate!!}</td>
                           <td>{!! $casereport->incidentLocation!!}</td>
                           <td>
-                          	<a href="{{ url('casereport/'.$casereport->id) }}"><i class="fa fa-eye"></i></a>
-                            <a href="{{ url('casereport/'.$casereport->id.'/edit') }}"><i class="fa fa-pencil"></i></a>
-                            <a href="{{ url('casereport/') }}"><i class="fa fa-trash"></i></a>
+                          	<a href="{{ url('reports/'.$casereport->id) }}"><i class="fa fa-eye"></i></a>
+                            <a href="{{ url('reports/'.$casereport->id.'/edit') }}"><i class="fa fa-pencil"></i></a>
+                            <a href="{{ url('reports/') }}"><i class="fa fa-trash"></i></a>
                           </td>
                         </tr>
                        @endforeach
