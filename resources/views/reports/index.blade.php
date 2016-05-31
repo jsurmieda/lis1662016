@@ -41,57 +41,26 @@
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Start date</th>
-                          <th>Salary</th>
+                          <th>Case ID</th>
+                          <th>Date Encoded</th>
+                          <th>Incident Location</th>
+                          <th>Controls</th>
                         </tr>
                       </thead>
 
-
                       <tbody>
+                      @foreach($casereportLists as $casereport)
                         <tr>
-                          <td>Tiger Nixon</td>
-                          <td>System Architect</td>
-                          <td>Edinburgh</td>
-                          <td>61</td>
-                          <td>2011/04/25</td>
-                          <td>$320,800</td>
+                          <td>{!! $casereport->id!!}</td>
+                          <td>{!! $casereport->receiptDate!!}</td>
+                          <td>{!! $casereport->incidentLocation!!}</td>
+                          <td>
+                          	<a href="{{ url('casereport/'.$casereport->id) }}"><i class="fa fa-eye"></i></a>
+                            <a href="{{ url('casereport/'.$casereport->id.'/edit') }}"><i class="fa fa-pencil"></i></a>
+                            <a href="{{ url('casereport/') }}"><i class="fa fa-trash"></i></a>
+                          </td>
                         </tr>
-                        <tr>
-                          <td>Garrett Winters</td>
-                          <td>Accountant</td>
-                          <td>Tokyo</td>
-                          <td>63</td>
-                          <td>2011/07/25</td>
-                          <td>$170,750</td>
-                        </tr>
-                        <tr>
-                          <td>Ashton Cox</td>
-                          <td>Junior Technical Author</td>
-                          <td>San Francisco</td>
-                          <td>66</td>
-                          <td>2009/01/12</td>
-                          <td>$86,000</td>
-                        </tr>
-                        <tr>
-                          <td>Cedric Kelly</td>
-                          <td>Senior Javascript Developer</td>
-                          <td>Edinburgh</td>
-                          <td>22</td>
-                          <td>2012/03/29</td>
-                          <td>$433,060</td>
-                        </tr>
-                        <tr>
-                          <td>Donna Snider</td>
-                          <td>Customer Support</td>
-                          <td>New York</td>
-                          <td>27</td>
-                          <td>2011/01/25</td>
-                          <td>$112,000</td>
-                        </tr>
+                       @endforeach
                       </tbody>
                     </table>
                   </div>

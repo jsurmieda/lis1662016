@@ -15,6 +15,8 @@ class CreateOriginofficesTable extends Migration
         Schema::create('originoffices', function (Blueprint $table) {
             $table->increments('id'); //each csc is described by unique integer primary key
             $table->string('csc_name');
+            $table->integer('regionalOffice_id')->unsigned(); 
+            $table->foreign('regionalOffice_id')->references('id')->on('regionalOffices')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });
