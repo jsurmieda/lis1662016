@@ -63,7 +63,7 @@
                           <td>Persons Involved</td>
                           <td>
                           @foreach($casedescriptions as $casedescription)
-                          <input class="form-control" id="disabledInput" type="text" placeholder="{!! $casedescription->lastname!!}" readonly>
+                          <input class="form-control" id="disabledInput" type="text" placeholder="{!! $casedescription->lastname!!}, {!! $casedescription->firstname!!}" readonly>
                           <br>
                           @endforeach
                           </td>
