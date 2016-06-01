@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>NCIP Website</title>
+	  <!--favicon-->
+    <link rel="shortcut icon" href="{{{ asset('ncip.ico') }}}">
 
     <!-- Bootstrap -->
     <link href="{{ asset('vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
