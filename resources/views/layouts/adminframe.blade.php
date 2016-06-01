@@ -211,7 +211,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            National Commission for Indigenous People. (c) 2016
+            National Commission on Indigenous People. (c) 2016
           </div>
           <div class="clearfix"></div>
         </footer>

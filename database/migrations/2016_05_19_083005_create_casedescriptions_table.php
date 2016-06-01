@@ -19,9 +19,7 @@ class CreateCasedescriptionsTable extends Migration
             $table->integer('relationship_id')->unsigned();
             $table->foreign('relationship_id')->references('id')->on('relationships')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('casereport_id')->unsigned();
-            $table->foreign('casereport_id')->references('id')->on('casereports')->onUpdate('cascade')->onDelete('cascade');
-            $table->integer('cadtcondition_id')->unsigned();
-            $table->foreign('cadtcondition_id')->references('id')->on('cadtconditions')->onUpdate('cascade')->onDelete('cascade');            
+            $table->foreign('casereport_id')->references('id')->on('casereports')->onUpdate('cascade')->onDelete('cascade');          
             $table->timestamps();
             $table->softDeletes();
         });

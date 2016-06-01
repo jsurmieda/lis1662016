@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Casereport;
+use App\Casedescription;
+use App\Person;
 
 class ReportController extends Controller
 {
@@ -16,7 +19,8 @@ class ReportController extends Controller
     public function index()
     {
         //
-        return view('reports.index');
+        $casereportLists = Casereport::paginate(10);
+        return view('reports.index', compact('casereportLists'));//display the index pager and append
     }
 
     /**
@@ -49,6 +53,12 @@ class ReportController extends Controller
     public function show($id)
     {
         //
+
+        $casereports = Casereport::findorFail($id);
+        $casedescriptions=Casereport::find($id)->casedescription;
+        $persons=Casedescription::find($id)->person;
+        //dd($casedescriptions);
+        return view('reports.show',compact('casereports','casedescriptions','persons'));
     }
 
     /**
