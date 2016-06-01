@@ -68,12 +68,12 @@
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li>
-                        	<a href="{{ url('/index') }}">Home</a>
+                        	<a href="{{ url('/home') }}">Home</a>
                         </li>
 						<li>
                         	<a href="{{ url('/news') }}">News</a>
                         </li>
-                        <li class="active">
+                        <li>
                         	<a href="{{ url('/about') }}">About Us</a>
                         </li>
                         <li>

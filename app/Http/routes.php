@@ -14,16 +14,13 @@
 Route::get('/', function () {
     return view('ncip.index');
 });
-
-Route::auth();
-
+//NCIP Main Page Sitemap
 Route::get('/home', 'HomeController@index');
+Route::get('/about', 'HomeController@about');
+Route::get('/news', 'HomeController@news');
+Route::get('/article', 'HomeController@article');
 
-Route::get('/about', function () {
-    return view('ncip.about');
-});
-Route::get('/admin', 'AdminController@index');
-
+//NCIP Forms
 Route::get('/forms.CADC', function () {
     return view('forms.CADC');
 });
@@ -47,6 +44,11 @@ Route::get('/forms.COC', function () {
 Route::get('/articles.create', function () {
     return view('articles.create');
 });
+
+Route::auth();
+
+Route::get('/admin', 'AdminController@index');
+
 /*
  *routes for the reports resource 
  */

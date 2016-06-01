@@ -30,7 +30,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-globe"></i> NCIP</a>
+              <a href="{{ url('/home') }}" class="site_title"><i class="fa fa-globe"></i> NCIP</a>
             </div>
 
             <div class="clearfix"></div>
