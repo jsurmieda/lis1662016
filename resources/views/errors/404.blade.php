@@ -4,6 +4,7 @@
     <section id="error" class="container text-center">
         <h1>404, Page not found</h1>
         <p>The Page you are looking for doesn't exist or an other error occurred.</p>
+        <a class="btn btn-primary" href="{{ URL::previous() }}">GO BACK TO PREVIOUS PAGE</a>
     </section><!--/#error-->
         <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
             <div class="row">
