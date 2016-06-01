@@ -60,10 +60,10 @@
                           <td><input class="form-control" id="disabledInput" type="text" placeholder="{!! $casereports->incidentLocation!!}" readonly></td>
                         </tr>
                         <tr>
-                          <td>Case Description</td>
+                          <td>Persons Involved</td>
                           <td>
                           @foreach($casedescriptions as $casedescription)
-                          <input class="form-control" id="disabledInput" type="text" placeholder="{!! $persons->lastname!!}" readonly>
+                          <input class="form-control" id="disabledInput" type="text" placeholder="{!! $casedescription->lastname!!}" readonly>
                           <br>
                           @endforeach
                           </td>
