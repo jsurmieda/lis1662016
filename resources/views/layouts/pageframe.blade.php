@@ -38,7 +38,7 @@
                             <ul class="social-share">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                                 <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                                 <li><a href="#"><i class="fa fa-skype"></i></a></li>
                             </ul>
@@ -64,7 +64,7 @@
                         <span class="icon-bar"></span>
                     </button>
                 </div>
-				
+
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li>
@@ -93,7 +93,7 @@
                                 <li><a href="#">Transparency Reports</a></li>
                                 <li><a href="#">NCIP Forms</a></li>
                             </ul>
-                        </li>                        
+                        </li>
                     </ul>
                 </div>
             </div><!--/.container-->
@@ -190,13 +190,13 @@
                         @if (Auth::guest())
                             <li><a href="{{ url('/admin') }}">Admin Login</a></li>
                         @else
-                            <li class="dropdown">
+                            <li class="dropup">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="{{ url('/admin') }}"><i class="fa fa-btn fa-sign-out"></i>Dashboard</a></li>
-                                    <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                  <li><a href="{{ url('/admin') }}"><p style="color:red;"><i class="fa fa-btn fa-sign-out"></i>Dashboard</p></a></li>
+                                  <li><a href="{{ url('/logout') }}"><p style="color:red;"><i class="fa fa-btn fa-sign-out"></i>Logout</p></a></li>
                                 </ul>
                             </li>
                         @endif

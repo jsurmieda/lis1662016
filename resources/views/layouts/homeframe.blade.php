@@ -195,13 +195,13 @@
                         @if (Auth::guest())
                             <li><a href="{{ url('/admin') }}">Admin Login</a></li>
                         @else
-                            <li class="dropdown">
+                            <li class="dropup">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="{{ url('/admin') }}"><i class="fa fa-btn fa-sign-out"></i>Dashboard</a></li>
-                                    <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                    <li><a href="{{ url('/admin') }}"><p style="color:red;"><i class="fa fa-btn fa-sign-out"></i>Dashboard</p></a></li>
+                                    <li><a href="{{ url('/logout') }}"><p style="color:red;"><i class="fa fa-btn fa-sign-out"></i>Logout</p></a></li>
                                 </ul>
                             </li>
                         @endif
