@@ -25,10 +25,9 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".second-navbar">
-
+<body>
     <header id="header">
-        <div class="navbar top-bar navbar-fixed-top">
+        <div class="top-bar">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-xs-4">
@@ -39,7 +38,7 @@
                             <ul class="social-share">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
                                 <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                                 <li><a href="#"><i class="fa fa-skype"></i></a></li>
                             </ul>
@@ -55,40 +54,37 @@
             </div><!--/.container-->
         </div><!--/.top-bar-->
 
-        <nav class="navbar navbar-inverse navbar-fixed-top second-navbar" role="navigation">
+        <nav class="navbar navbar-inverse" role="banner">
             <div class="container">
-                <div class="navbar-header page-scroll">
+                <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-
                 </div>
-
+				
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="hidden">
-                          <a class="page-scroll" href="#page-top"></a>
+                        <li>
+                        	<a href="{{ url('/index') }}">Home</a>
+                        </li>
+						<li>
+                        	<a href="{{ url('/news') }}">News</a>
+                        </li>
+                        <li class="active">
+                        	<a href="{{ url('/about') }}">About Us</a>
                         </li>
                         <li>
-                        	<a class="page-scroll" href="#page-top">Home</a>
+							<a href="{{ url('/services') }}">Services</a>
                         </li>
-                        <li>
-                        	<a class="page-scroll" href="#about">About Us</a>
-                        </li>
-                        <li>
-                          <a class="page-scroll" href="#offices">Offices</a>
-                        </li>
-                        <li>
-                          <a class="page-scroll" href="#service">Services</a>
+						<li>
+							<a href="{{ url('/offices') }}">Offices</a>
                         </li>
                         <li class="nav-divider"></li>
-                        <li>
-                        	<a class="page-scroll" href="#recent-works">News</a>
-                        </li>
-                        <li class="pipes"> | </li>
+
+						<li class="pipes"> | </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
@@ -97,13 +93,12 @@
                                 <li><a href="#">Transparency Reports</a></li>
                                 <li><a href="#">NCIP Forms</a></li>
                             </ul>
-                        </li>
+                        </li>                        
                     </ul>
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
-
-    </header><!--/header-->
+	</header><!--/header-->
 
     @yield('content')
 
@@ -189,10 +184,22 @@
                 </div>
                 <div class="col-sm-4">
                     <ul class="pull-right">
-                        <li><a href="/home">Home</a></li>
+                        <li><a href="{{ url('/index') }}">Home</a></li>
                         <li><a href="#">FAQs</a></li>
                         <li><a href="#">Contact Us</a></li>
-                        <li><a href="admin.index">Admin Login</a></li>
+                        @if (Auth::guest())
+                            <li><a href="{{ url('/admin') }}">Admin Login</a></li>
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ url('/admin') }}"><i class="fa fa-btn fa-sign-out"></i>Dashboard</a></li>
+                                    <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                </ul>
+                            </li>
+                        @endif
                     </ul>
                 </div>
             </div>
@@ -206,8 +213,6 @@
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/scrolling-nav.js"></script>
 
 </body>
 </html>

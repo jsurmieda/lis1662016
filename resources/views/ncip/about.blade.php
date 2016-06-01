@@ -1,4 +1,4 @@
-@extends('layouts.homeframe')
+@extends('layouts.pageframe')
 
 @section('content')
     <section id="about-us">

@@ -72,22 +72,22 @@
                         <li class="hidden">
                           <a class="page-scroll" href="#page-top"></a>
                         </li>
-                        <li>
+                        <li class="active">
                         	<a class="page-scroll" href="#page-top">Home</a>
+                        </li>
+						<li>
+                        	<a class="page-scroll" href="#recent-works">News</a>
                         </li>
                         <li>
                         	<a class="page-scroll" href="#about">About Us</a>
                         </li>
                         <li>
-                          <a class="page-scroll" href="#offices">Offices</a>
-                        </li>
-                        <li>
                           <a class="page-scroll" href="#service">Services</a>
                         </li>
-                        <li class="nav-divider"></li>
-                        <li>
-                        	<a class="page-scroll" href="#recent-works">News</a>
+						<li>
+                          <a class="page-scroll" href="#offices">Offices</a>
                         </li>
+                        <li class="nav-divider"></li>
                         <li class="pipes"> | </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <i class="fa fa-angle-down"></i></a>
@@ -189,7 +189,7 @@
                 </div>
                 <div class="col-sm-4">
                     <ul class="pull-right">
-                        <li><a href="/home">Home</a></li>
+                        <li><a href="{{ url('/index') }}">Home</a></li>
                         <li><a href="#">FAQs</a></li>
                         <li><a href="#">Contact Us</a></li>
                         @if (Auth::guest())

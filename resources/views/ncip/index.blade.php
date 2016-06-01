@@ -80,151 +80,7 @@
         </a>
     </section><!--/#main-slider-->
 
-	<section id="about" >
-        <div class="container">
-           <div class="center wow fadeInDown">
-                <h2>What is NCIP?</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-            </div>
-
-            <div class="row">
-                <div class="features">
-                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fa fa-bullhorn"></i>
-                            <h2>Matatapang</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fa fa-comments"></i>
-                            <h2>Matatalino</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fa fa-cloud-download"></i>
-                            <h2>Hinding hindi magpapahuli</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                        </div>
-                    </div><!--/.col-md-4-->
-                
-                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fa fa-leaf"></i>
-                            <h2>Ganyan ang mga taga UP</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fa fa-cogs"></i>
-                            <h2>U-nibersidad ng Pilipinas</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="feature-wrap">
-                            <i class="fa fa-heart"></i>
-                            <h2>UP Fight!</h2>
-                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
-                        </div>
-                    </div><!--/.col-md-4-->
-                </div><!--/.services-->
-            </div><!--/.row-->
-        <hr style="background-color:#333 ;size:1px;width:85%">    
-        </div><!--/.container-->
-    </section><!--/#feature-->
-
-    <section id="service">
-        <div class="container"> 
-        	<div class="center wow fadeInDown">
-                <h2>Our Services</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
-            </div>
-            <div class="row">
-                <div class="wow fadeInDown">
-                   <div class="tab-wrap"> 
-                        <div class="media">
-                            <div class="parrent pull-left">
-                                <ul class="nav nav-tabs nav-stacked">
-                                    <li class=""><a href="#tab1" data-toggle="tab" class="analistic-01">Application to Certificate of Confirmation</a></li>
-                                    <li class="active"><a href="#tab2" data-toggle="tab" class="analistic-02">Application to Certificate of Ancestral Domain Conversion</a></li>
-                                    <li class=""><a href="#tab3" data-toggle="tab" class="tehnical">Application to Certificate of Ancestral Domain Title</a></li>
-                                    <li class=""><a href="#tab4" data-toggle="tab" class="tehnical">Application to Certificate of Ancestral Land Conversion</a></li>
-                                    <li class=""><a href="#tab5" data-toggle="tab" class="tehnical">Application to Certificate of Ancestral Domain Title</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="parrent media-body">
-                                <div class="tab-content">
-                                    <div class="tab-pane fade active in" id="tab1">
-                                        <div class="media">
-                                           <div class="pull-left">
-                                                <img class="img-responsive" src="images/tab2.png">
-                                            </div>
-                                            <div class="media-body">
-                                                 <h2>Adipisicing elit</h2>
-                                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="tab-pane fade" id="tab2">
-                                        <div class="media">
-                                           <div class="pull-left">
-                                                <img class="img-responsive" src="images/tab1.png">
-                                            </div>
-                                            <div class="media-body">
-                                                 <h2>Adipisicing elit</h2>
-                                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use.
-                                                 </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                     <div class="tab-pane fade" id="tab3">
-                                        <div class="media">
-                                           <div class="pull-left">
-                                                <img class="img-responsive" src="images/tab1.png">
-                                            </div>
-                                            <div class="media-body">
-                                                 <h2>Adipisicing elit</h2>
-                                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use.
-                                                 </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                     
-                                 	<div class="tab-pane fade" id="tab4">
-                                        <div class="media">
-                                           <div class="pull-left">
-                                                <img class="img-responsive" src="images/tab2.png">
-                                            </div>
-                                            <div class="media-body">
-                                                 <h2>Adipisicing elit</h2>
-                                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use.
-                                                 </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!--/.tab-content-->  
-                            </div> <!--/.media-body--> 
-                        </div> <!--/.media-->     
-                    </div><!--/.tab-wrap-->               
-                </div><!--/.col-sm-6-->
-            </div><!--/.row-->
-        <hr style="background-color:#333 ;size:1px;width:85%">   
-        </div><!--/.container-->
-    </section><!--/#content-->
-
-    <section id="recent-works">
+	    <section id="recent-works">
         <div class="container">
             <div class="center wow fadeInDown">
                 <h2>Recent Projects and Programs</h2>
@@ -336,9 +192,169 @@
                     </div>
                 </div>   
             </div><!--/.row-->
+			<br>
+			<br>
+			<div class="col-md-12 text-center">
+				<a class="btn btn-danger" href="{{ url('/news') }}">Read More</a>
+			</div>
+			<br>
+			<br>
         <hr style="background-color:#333 ;size:1px;width:85%">   
         </div><!--/.container-->
     </section><!--/#recent-works-->
+	
+	<section id="about" >
+        <div class="container">
+           <div class="center wow fadeInDown">
+                <h2>What is NCIP?</h2>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div>
+
+            <div class="row">
+                <div class="features">
+                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-bullhorn"></i>
+                            <h2>Matatapang</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-comments"></i>
+                            <h2>Matatalino</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-cloud-download"></i>
+                            <h2>Hinding hindi magpapahuli</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                        </div>
+                    </div><!--/.col-md-4-->
+                
+                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-leaf"></i>
+                            <h2>Ganyan ang mga taga UP</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-cogs"></i>
+                            <h2>U-nibersidad ng Pilipinas</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-heart"></i>
+                            <h2>UP Fight!</h2>
+                            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                        </div>
+                    </div><!--/.col-md-4-->
+					
+					<div class="col-md-12 text-center">
+						<a class="btn btn-danger" href="{{ url('/about') }}">Read More</a>
+					</div>
+                </div><!--/.about-->
+            </div><!--/.row-->
+        <hr style="background-color:#333 ;size:1px;width:85%">    
+        </div><!--/.container-->
+    </section><!--/#feature-->
+
+    <section id="service">
+        <div class="container"> 
+        	<div class="center wow fadeInDown">
+                <h2>Our Services</h2>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+            </div>
+            <div class="row">
+                <div class="wow fadeInDown">
+                   <div class="tab-wrap"> 
+                        <div class="media">
+                            <div class="parrent pull-left">
+                                <ul class="nav nav-tabs nav-stacked">
+                                    <li class=""><a href="#tab1" data-toggle="tab" class="analistic-01">Application to Certificate of Confirmation</a></li>
+                                    <li class="active"><a href="#tab2" data-toggle="tab" class="analistic-02">Application to Certificate of Ancestral Domain Conversion</a></li>
+                                    <li class=""><a href="#tab3" data-toggle="tab" class="tehnical">Application to Certificate of Ancestral Domain Title</a></li>
+                                    <li class=""><a href="#tab4" data-toggle="tab" class="tehnical">Application to Certificate of Ancestral Land Conversion</a></li>
+                                    <li class=""><a href="#tab5" data-toggle="tab" class="tehnical">Application to Certificate of Ancestral Domain Title</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="parrent media-body">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade active in" id="tab1">
+                                        <div class="media">
+                                           <div class="pull-left">
+                                                <img class="img-responsive" src="images/tab2.png">
+                                            </div>
+                                            <div class="media-body">
+                                                 <h2>Adipisicing elit</h2>
+                                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="tab2">
+                                        <div class="media">
+                                           <div class="pull-left">
+                                                <img class="img-responsive" src="images/tab1.png">
+                                            </div>
+                                            <div class="media-body">
+                                                 <h2>Adipisicing elit</h2>
+                                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use.
+                                                 </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                     <div class="tab-pane fade" id="tab3">
+                                        <div class="media">
+                                           <div class="pull-left">
+                                                <img class="img-responsive" src="images/tab1.png">
+                                            </div>
+                                            <div class="media-body">
+                                                 <h2>Adipisicing elit</h2>
+                                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use.
+                                                 </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     
+                                 	<div class="tab-pane fade" id="tab4">
+                                        <div class="media">
+                                           <div class="pull-left">
+                                                <img class="img-responsive" src="images/tab2.png">
+                                            </div>
+                                            <div class="media-body">
+                                                 <h2>Adipisicing elit</h2>
+                                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use.
+                                                 </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!--/.tab-content-->  
+                            </div> <!--/.media-body--> 
+                        </div> <!--/.media-->     
+                    </div><!--/.tab-wrap-->               
+                </div><!--/.col-sm-6-->
+				<div class="col-md-12 text-center">
+					<a class="btn btn-danger" href="{{ url('/services') }}">Read More</a>
+				</div>
+            </div><!--/.row-->
+        <hr style="background-color:#333 ;size:1px;width:85%">   
+        </div><!--/.container-->
+    </section><!--/#content-->
+
+
 
     <section id="offices">
        <div class="container"> 
@@ -491,8 +507,12 @@
                             <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
                         </div>
                     </div>
-                </div>                                                
+                </div>     
+			<div class="col-md-12 text-center">
+				<a class="btn btn-danger" href="{{ url('/offices') }}">Read More</a>
+			</div>				
             </div><!--/.row-->
+
             <hr style="background-color:#333;size:1px;width:85%">  
         </div><!--/.container-->
     </section><!--/#services-->
