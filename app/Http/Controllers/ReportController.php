@@ -83,10 +83,7 @@ class ReportController extends Controller
         //
 
         $casereports = Casereport::findorFail($id);
-        //$casedescriptions=Casereport::find($id)->casedescription;
-        //$casedescriptions=Casedescription::where('casereport_id','=', $id)->get();
-        $casedescriptions=Casedescription::where('casereport_id','=', $id)->join('persons','casedescriptions.person_id','=','persons.id')->select('casedescriptions.*','persons.lastname as lastname','persons.firstname as firstname')->get();
-        //$persons=Casedescription::find($id)->person;
+        $casedescriptions=Casedescription::where('casereport_id','=', $id)->join('persons','casedescriptions.person_id','=','persons.id')->select('casedescriptions.*','persons.lastname as lastname','persons.firstname as firstname' ,'persons.middlename as middlename')->get();
         //dd($persons);
         return view('reports.show',compact('casereports','casedescriptions'));
     }

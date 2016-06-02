@@ -62,10 +62,17 @@
                         <tr>
                           <td>Persons Involved</td>
                           <td>
-                          @foreach($casedescriptions as $casedescription)
-                          <input class="form-control" id="disabledInput" type="text" placeholder="{!! $casedescription->lastname!!}, {!! $casedescription->firstname!!}" readonly>
-                          <br>
-                          @endforeach
+                          <table>
+                            <tr>
+                             @foreach($casedescriptions as $casedescription)
+                              <td>
+                                {!! $casedescription->lastname!!}, {!! $casedescription->firstname!!} {!! $casedescription->middlename!!}
+                              </td>
+                                <input class="form-control" id="disabledInput" type="text" placeholder="{!! $casedescription->lastname!!}, {!! $casedescription->firstname!!} {!! $casedescription->middlename!!}" readonly>
+                                <br>
+                             @endforeach
+                            </tr>
+                          </table>
                           </td>
                         </tr>
                       </tbody>
