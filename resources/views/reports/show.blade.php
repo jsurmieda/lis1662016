@@ -60,18 +60,28 @@
                           <td><input class="form-control" id="disabledInput" type="text" placeholder="{!! $casereports->incidentLocation!!}" readonly></td>
                         </tr>
                         <tr>
+                          <td>Case Type</td>
+                          <td><input class="form-control" id="disabledInput" type="text" placeholder="{!! $casereport->casetypeName!!}" readonly></td>
+                        </tr>
+                        <tr>
                           <td>Persons Involved</td>
                           <td>
-                          <table>
+                          <table id="datatable" class="table table-striped table-bordered">
                             <tr>
-                             @foreach($casedescriptions as $casedescription)
+                              <th>Name</th>
+                              <th>Involvement to the Case</th>
+                            </tr>
+                            @foreach($casedescriptions as $casedescription)
+                            <tr>
                               <td>
                                 {!! $casedescription->lastname!!}, {!! $casedescription->firstname!!} {!! $casedescription->middlename!!}
                               </td>
-                                <input class="form-control" id="disabledInput" type="text" placeholder="{!! $casedescription->lastname!!}, {!! $casedescription->firstname!!} {!! $casedescription->middlename!!}" readonly>
-                                <br>
-                             @endforeach
+                              <td>
+                                {!! $casedescription->rel_type!!}
+                              </td>
                             </tr>
+                            @endforeach                             
+
                           </table>
                           </td>
                         </tr>

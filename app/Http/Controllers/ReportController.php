@@ -82,8 +82,18 @@ class ReportController extends Controller
     {
         //
 
-        $casereports = Casereport::findorFail($id);
-        $casedescriptions=Casedescription::where('casereport_id','=', $id)->join('persons','casedescriptions.person_id','=','persons.id')->select('casedescriptions.*','persons.lastname as lastname','persons.firstname as firstname' ,'persons.middlename as middlename')->get();
+        //$casereports = Casereport::findorFail($id)
+        $casereports = Casereport::findorFail($id)
+        ->join('casetypes','casereports.casetype_id','=','casetypes.id')
+        ->select('casereports.*','casetypes.casetypeName as casetypeName')
+        ->get();
+        //$casetypes=Casetype::where($id->casetype_id,'=','casetypes.id')->get();
+        dd($casereports);
+        $casedescriptions=Casedescription::where('casereport_id','=', $id)
+            ->join('persons','casedescriptions.person_id','=','persons.id')
+            ->join('relationships','casedescriptions.relationship_id','=','relationships.id')
+            ->select('casedescriptions.*','persons.lastname as lastname','persons.firstname as firstname' ,'persons.middlename as middlename','relationships.rel_type as rel_type')
+            ->get();
         //dd($persons);
         return view('reports.show',compact('casereports','casedescriptions'));
     }
