@@ -50,25 +50,45 @@ class ReportController extends Controller
     public function store(Request $request)
     {
         //
-        dd($request);
-        /*$savePerson = Person::create([
+        
+
+        $cadt_id = Tribe::where('id','=',$request->tribe_id)->select('tribes.cadtcondition_id')->get();
+
+        $person = Person::where('lastname','=',$request->lastname)->where('firstname','=',$request->firstname)->select('persons.*')->get();
+        if($person):
+            $person_id = Person::where('lastname','=',$request->lastname)->where('firstname','=',$request->firstname)->select('persons.id')->get();
+        else:
+            $savePerson = Tribe::findorFail($request->tribe_id);
+            $savePerson->persons()->save([
             'firstname' => $request->firstname,
             'middlename' => $request->middlename,
             'lastname' => $request->lastname,
             'suffix' => $request->suffix,
             'address' => $request->address,
-            'tribe_id' => $request->tribe,
+            'tribe_id' => $request->tribe_id,
+            ]);
+            $person_id = Person::orderBy('created_at', 'desc')->first()->id;
+        endif;
+        
+
+        //dd($request, $cadt_id, $person_id);
+        
+
+        /*$saveReport = Casereport::create([
+            'receiptDate' => $request->receiptDate,
+            'casetype_id' => $request->casetype_id,
+            'infoSource' => $request->infoSource,
+            'incidentLocation' => $request->incidentLocation,
+            'cadtcondition_id' => $cadt_id,
+            'incidentDate' => $request->incidentDate,
+            'originoffice_id' => $request->originoffice_id,
         ]);
 
-
-        $saveReport = Casereport::create([
-            '' => $request->name,
-            'price' => $request->price,
-        ]);
-
-        $saveProduct = Product::create([
-            'name' => $request->name,
-            'price' => $request->price,
+        $casereport_id = Casereport::orderBy('created_at', 'desc')->first()->id;
+        $saveDescription = Casedescription::create([
+            'person_id' => $person_id,
+            'relationship_id' => $request->relationship_id,
+            'casereport_id' => $casereport_id,
         ]);*/
     }
 
