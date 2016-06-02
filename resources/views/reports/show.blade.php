@@ -61,7 +61,7 @@
                         </tr>
                         <tr>
                           <td>Case Type</td>
-                          <td><input class="form-control" id="disabledInput" type="text" placeholder="{!! $casereport->casetypeName!!}" readonly></td>
+                          <td><input class="form-control" id="disabledInput" type="text" placeholder="{!! $casetypes->casetypeName!!}" readonly></td>
                         </tr>
                         <tr>
                           <td>Persons Involved</td>
