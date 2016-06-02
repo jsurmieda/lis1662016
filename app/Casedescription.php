@@ -16,4 +16,10 @@ class Casedescription extends Model
     {
     	return $this->hasOne('App\Person','id');
     }
+
+    public function Relationship()
+    {
+    	return $this->belongsTo('App\Relationship');
+    }
+
 }

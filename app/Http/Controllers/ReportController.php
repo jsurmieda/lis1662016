@@ -6,8 +6,12 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Casereport;
+use App\Casetype;
 use App\Casedescription;
 use App\Person;
+use App\Tribe;
+use App\Relationship;
+use App\Originoffice;
 
 class ReportController extends Controller
 {
@@ -30,7 +34,11 @@ class ReportController extends Controller
      */
     public function create()
     {
-        return view('reports.create');
+        $tribes = Tribe::lists('tribeName', 'id');
+        $casetypes = Casetype::lists('casetypeName', 'id');
+        $relations = Relationship::lists('rel_type', 'id');
+        $offices = Originoffice::lists('csc_name', 'id');
+        return view('reports.create', compact('tribes', 'casetypes', 'relations', 'offices'));
     }
 
     /**
@@ -42,6 +50,26 @@ class ReportController extends Controller
     public function store(Request $request)
     {
         //
+        dd($request);
+        /*$savePerson = Person::create([
+            'firstname' => $request->firstname,
+            'middlename' => $request->middlename,
+            'lastname' => $request->lastname,
+            'suffix' => $request->suffix,
+            'address' => $request->address,
+            'tribe_id' => $request->tribe,
+        ]);
+
+
+        $saveReport = Casereport::create([
+            '' => $request->name,
+            'price' => $request->price,
+        ]);
+
+        $saveProduct = Product::create([
+            'name' => $request->name,
+            'price' => $request->price,
+        ]);*/
     }
 
     /**

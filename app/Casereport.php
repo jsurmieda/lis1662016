@@ -1,4 +1,4 @@
-<?php
+Or<?php
 
 namespace App;
 
@@ -7,8 +7,28 @@ use Illuminate\Database\Eloquent\Model;
 class Casereport extends Model
 {
     //
-    public function Casedescription()
+
+    protected $table='Casereports';
+    protected $fillable=[
+    	'cadtcondition_id','receiptDate','infoSource','incidentLocation','incidentDate','casetype_id','originoffice_id'
+    	];
+
+    public function Casedescriptions()
     {
     	return $this->hasMany('App\Casedescription');
+    }
+
+    public function Cadtcondition()
+    {
+    	return $this->belongsTo('App\Cadtcondition');
+    }
+
+    public function Casetype()
+    {
+    	return $this->belongsTo('App\Casetype');
+    }
+    public function Originoffice()
+    {
+    	return $this->belongsTo('App\Originoffice');
     }
 }
