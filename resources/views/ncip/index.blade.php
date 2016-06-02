@@ -281,7 +281,7 @@
                         <div class="media">
                             <div class="parrent pull-left">
                                 <ul class="nav nav-tabs nav-stacked">
-                                    <li class=""><a href="#tab1" data-toggle="tab" class="analistic-01">Application to Certificate of Confirmation</a></li>
+                                    <li class=""><a href="public/forms/COC" data-toggle="tab" class="analistic-01">Application to Certificate of Confirmation</a></li>
                                     <li class="active"><a href="#tab2" data-toggle="tab" class="analistic-02">Application to Certificate of Ancestral Domain Conversion</a></li>
                                     <li class=""><a href="#tab3" data-toggle="tab" class="tehnical">Application to Certificate of Ancestral Domain Title</a></li>
                                     <li class=""><a href="#tab4" data-toggle="tab" class="tehnical">Application to Certificate of Ancestral Land Conversion</a></li>
