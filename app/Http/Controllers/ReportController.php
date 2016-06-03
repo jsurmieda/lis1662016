@@ -84,7 +84,7 @@ class ReportController extends Controller
        
         $request->user()->casedescriptions()->create([
             'person_id' => $person_id,
-            'relationship_id' => $request->relationship_id,
+            'relationship_id' => $request->rel_id,
             'casereport_id' => $casereport_id,
         ]);
 
