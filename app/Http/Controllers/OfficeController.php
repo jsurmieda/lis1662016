@@ -26,6 +26,8 @@ class OfficeController extends Controller
     public function create()
     {
         //
+        $officeLists = Originoffices::paginate(10);
+        return view('offices.index', compact('officeLists'));
     }
 
     /**

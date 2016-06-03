@@ -104,7 +104,7 @@ class ReportController extends Controller
 
         //$casereports = Casereport::findorFail($id)
         $casereports = Casereport::findorFail($id);
-        //$casetypes = CaseTypes::where('casereport_id','=', $id)join('casetypes','casereports.casetype_id','=','casetypes.id')
+        //$casetypes = CaseType::where('casereport_id','=', $id)->join('casetypes','casereports.casetype_id','=','casetypes.id')
         //->select('casereports.*','casetypes.casetypeName as casetypeName')
         //->get();
         //$casetypes=Casetype::where($id->casetype_id,'=','casetypes.id')->get();

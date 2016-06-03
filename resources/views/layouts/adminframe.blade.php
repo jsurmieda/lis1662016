@@ -68,10 +68,11 @@
                       <li><a href="{{ url('/articles.create') }}"><i class="fa fa-pencil"></i>Post New Article</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-bars"></i> Administrative Menu <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-bars"></i> Databases <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{ url('/users') }}"><i class="fa fa-database"></i>Users List</a></li>
-                      <li><a href="{{ url('/department') }}"><i class="fa fa-database"></i>Indigent List</a></li>
+                      <li><a href="{{ url('/persons') }}"><i class="fa fa-database"></i>Indigent List</a>
+                      <li><a href="{{ url('/offices') }}"><i class="fa fa-database"></i>NCIP Offices List</a></li>
                     </ul>
                   </li>
                   <li><a href="{{ url('/about') }}"><i class="fa fa-user"></i> About</a></li>

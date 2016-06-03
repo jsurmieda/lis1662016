@@ -61,7 +61,7 @@
                         </tr>
                         <tr>
                           <td>Case Type</td>
-                          <td><input class="form-control" id="disabledInput" type="text" placeholder="" readonly></td>
+                          <td><input class="form-control" id="disabledInput" type="text" placeholder="{!! $casereports->casetype_id!!}" readonly></td>
                         </tr>
                         <tr>
                           <td>Persons Involved</td>
@@ -90,7 +90,7 @@
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th colspan=2>Related Persons</th>
+                          <th colspan=2>Case Notes</th>
                         </tr>
                       </thead>
 
