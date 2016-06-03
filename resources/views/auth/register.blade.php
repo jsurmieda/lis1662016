@@ -38,6 +38,22 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">User Role</label>
+
+                            <div class="col-md-6">
+                                {!! Form::select('role_id', ['1' => 'Dev', '2' => 'Admin']) !!}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Office</label>
+
+                            <div class="col-md-6">
+                                {!! Form::select('originoffice_id', ['1' => 'Ilocos Office 1', '2' => 'Ilocos Office 2']) !!}
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">Password</label>
 
