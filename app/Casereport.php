@@ -31,4 +31,9 @@ class Casereport extends Model
     {
     	return $this->belongsTo('App\Originoffice');
     }
+	
+	public function User()
+	{
+		return $this->belongsTo('App\User');
+	}
 }

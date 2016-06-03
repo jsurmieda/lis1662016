@@ -22,5 +22,10 @@ class Person extends Model
     {
     	return $this->belongsTo('App\Tribe');
     }
+	
+	public function User()
+	{
+		return $this->belongsTo('App\User');
+	}
 }
 
