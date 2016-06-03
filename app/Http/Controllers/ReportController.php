@@ -50,16 +50,11 @@ class ReportController extends Controller
     public function store(Request $request)
     {
         //
-        
-
-        $cadt_id = Tribe::where('id','=',$request->tribe_id)->select('tribes.cadtcondition_id')->get();
-
-        $person = Person::where('lastname','=',$request->lastname)->where('firstname','=',$request->firstname)->select('persons.*')->get();
-        if($person):
-            $person_id = Person::where('lastname','=',$request->lastname)->where('firstname','=',$request->firstname)->select('persons.id')->get();
-        else:
-            $savePerson = Tribe::findorFail($request->tribe_id);
-            $savePerson->persons()->save([
+        $person = Person::where('lastname','=',$request->lastname)->where('firstname','=',$request->firstname)->where('middlename','=',$request->middlename)->select('persons.*')->get();
+        //dd($person->count());
+        if($person->isEmpty()):
+            //dd('walang laman!');
+            $request->user()->persons()->create([
             'firstname' => $request->firstname,
             'middlename' => $request->middlename,
             'lastname' => $request->lastname,
@@ -68,13 +63,13 @@ class ReportController extends Controller
             'tribe_id' => $request->tribe_id,
             ]);
             $person_id = Person::orderBy('created_at', 'desc')->first()->id;
+        else:
+            $person_id = Person::where('lastname','=',$request->lastname)->where('firstname','=',$request->firstname)->where('middlename','=',$request->middlename)->first()->id;            
         endif;
-        
 
-        //dd($request, $cadt_id, $person_id);
-        
+        $cadt_id = Tribe::where('id','=',$request->tribe_id)->first()->id;
 
-        /*$saveReport = Casereport::create([
+        $request->user()->casereports()->create([
             'receiptDate' => $request->receiptDate,
             'casetype_id' => $request->casetype_id,
             'infoSource' => $request->infoSource,
@@ -85,11 +80,16 @@ class ReportController extends Controller
         ]);
 
         $casereport_id = Casereport::orderBy('created_at', 'desc')->first()->id;
-        $saveDescription = Casedescription::create([
+        //dd($person_id, $casereport_id);
+       
+        $request->user()->casedescriptions()->create([
             'person_id' => $person_id,
             'relationship_id' => $request->relationship_id,
             'casereport_id' => $casereport_id,
-        ]);*/
+        ]);
+
+        $casereportLists = Casereport::paginate(10);
+        return view('reports.index', compact('casereportLists'));
     }
 
     /**

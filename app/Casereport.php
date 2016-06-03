@@ -10,7 +10,7 @@ class Casereport extends Model
 
     protected $table='Casereports';
     protected $fillable=[
-    	'cadtcondition_id','receiptDate','infoSource','incidentLocation','incidentDate','casetype_id','originoffice_id'
+    	'cadtcondition_id','receiptDate','infoSource','incidentLocation','incidentDate','casetype_id','originoffice_id', 'user_id',
     	];
 
     public function Casedescriptions()
