@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Casereport;
 use App\Casetype;
+use App\Casenote;
 use App\Casedescription;
 use App\Person;
 use App\Tribe;
@@ -114,8 +115,12 @@ class ReportController extends Controller
             ->join('relationships','casedescriptions.relationship_id','=','relationships.id')
             ->select('casedescriptions.*','persons.lastname as lastname','persons.firstname as firstname' ,'persons.middlename as middlename','relationships.rel_type as rel_type')
             ->get();
-        //dd($persons);
-        return view('reports.show',compact('casereports','casedescriptions'));
+        $casenotes=Casenote::where('casereport_id','=', $id)
+            ->join('notequalifiers','casenotes.notequalifier_id','=','notequalifiers.id')
+            ->select('casenotes.*','casenotes.notes as notes', 'notequalifiers.noteType as noteType')
+            ->get();
+        //dd($casenotes);
+        return view('reports.show',compact('casereports','casedescriptions','casenotes'));
     }
 
     /**

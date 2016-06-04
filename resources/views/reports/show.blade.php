@@ -96,16 +96,17 @@
 
                       <tbody>
                         <tr>
-                          <td>Case ID</td>
-                          <td><input class="form-control" id="disabledInput" type="text" placeholder="{!! $casereports->id!!}" readonly></td>
-                        </tr>
-                        <tr>
-                          <td>Date Encoded</td>
-                          <td><input class="form-control" id="disabledInput" type="text" placeholder="{!! $casereports->receiptDate!!}" readonly></td>
-                        </tr>
-                        <tr>
-                          <td>Incident Location</td>
-                          <td><input class="form-control" id="disabledInput" type="text" placeholder="{!! $casereports->incidentLocation!!}" readonly></td>
+                          <td>
+                          @foreach($casenotes as $casenote)
+                            <div class="form-group">
+                              <div class="input-group">
+                                <div class="input-group-addon">{!! $casenote->date!!}</div>
+                                <input type="text" class="form-control" id="date" placeholder="{!! $casenote->notes!!}" readonly>
+                                <div class="input-group-addon">{!! $casenote->noteType!!}</div>
+                              </div>
+                            </div>
+                          @endforeach                        
+                          </td>
                         </tr>
                       </tbody>
                     </table>
