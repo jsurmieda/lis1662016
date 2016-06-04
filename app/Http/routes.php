@@ -44,6 +44,9 @@ Route::get('/forms.COC', function () {
 Route::get('/articles.create', function () {
     return view('articles.create');
 });
+Route::get('/notifications.index', function () {
+    return view('notifications.index');
+});
 
 Route::auth();
 
