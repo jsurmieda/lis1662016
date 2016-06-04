@@ -58,4 +58,5 @@ Route::get('/admin', 'AdminController@index');
 Route::group(['middleware' => 'auth'], function()
 {
 Route::resource('reports', 'ReportController');
+Route::resource('persons', 'PersonController');
 });
