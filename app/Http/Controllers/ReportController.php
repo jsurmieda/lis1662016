@@ -105,9 +105,9 @@ class ReportController extends Controller
 
         //$casereports = Casereport::findorFail($id)
         $casereports = Casereport::findorFail($id);
-        //$casetypes = CaseType::where('casereport_id','=', $id)->join('casetypes','casereports.casetype_id','=','casetypes.id')
-        //->select('casereports.*','casetypes.casetypeName as casetypeName')
-        //->get();
+        $casetypes = Casereport::join('casetypes','casereports.casetype_id','=','casetypes.id')
+            ->select('casereports.*','casetypes.casetypeName as casetypeName')
+            ->get();
         //$casetypes=Casetype::where($id->casetype_id,'=','casetypes.id')->get();
         //dd($casetypes);
         $casedescriptions=Casedescription::where('casereport_id','=', $id)
@@ -120,7 +120,7 @@ class ReportController extends Controller
             ->select('casenotes.*','casenotes.notes as notes', 'notequalifiers.noteType as noteType')
             ->get();
         //dd($casenotes);
-        return view('reports.show',compact('casereports','casedescriptions','casenotes'));
+        return view('reports.show',compact('casereports','casedescriptions','casetypes','casenotes'));
     }
 
     /**

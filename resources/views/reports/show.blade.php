@@ -61,7 +61,8 @@
                         </tr>
                         <tr>
                           <td>Case Type</td>
-                          <td><input class="form-control" id="disabledInput" type="text" placeholder="{!! $casereports->casetype_id!!}" readonly></td>
+                          <td>@foreach($casetypes as $casetype)
+                          <input class="form-control" id="disabledInput" type="text" placeholder="{!! $casetype->casetypeName!!}" readonly>@endforeach</td>
                         </tr>
                         <tr>
                           <td>Persons Involved</td>
