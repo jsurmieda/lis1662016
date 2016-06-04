@@ -28,7 +28,7 @@ class Casereport extends Model
 
     public function Casetype()
     {
-    	return $this->belongsTo('App\Casetype');
+    	return $this->hasOne('App\Casetype', 'id');
     }
 
     public function Casenote()
