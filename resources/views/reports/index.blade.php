@@ -58,8 +58,8 @@
                           	<a href="{{ url('reports/'.$casereport->id) }}"><i class="fa fa-eye"></i></a>
                             <a href="{{ url('reports/'.$casereport->id.'/edit') }}"><i class="fa fa-pencil"></i></a>
                            {{ Form::open(['method' => 'DELETE', 'action' => ['ReportController@destroy', $casereport->id]]) }} 
-              {{ Form::submit('Delete', ['class' => 'fa fa-trash']) }} 
-            {{ Form::close() }}
+                           {{ Form::submit('Delete', ['class' => 'fa fa-trash']) }} 
+                           {{ Form::close() }}
                           </td>
                         </tr>
                        @endforeach

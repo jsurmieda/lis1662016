@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Casereport;
 use App\Http\Requests;
 
 
@@ -21,7 +21,9 @@ class AdminController extends Controller
     public function index()
     {
         //
-        return view('admin.index');
+        $casereportcounts = Casereport::count();
+        //dd($casereportcount);
+        return view('admin.index', compact('casereportcounts'));
     }
 
     /**
