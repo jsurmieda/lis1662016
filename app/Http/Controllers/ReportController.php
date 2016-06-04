@@ -150,6 +150,16 @@ class ReportController extends Controller
     public function destroy($id)
     {
         //
+        $deleteCasereport = Casereport::findorfail($id);
+        $deleteCasereport ->delete();
+
+        if($deleteCasereport):
+            return redirect('reports')
+            ->with('status', 'Entry deleted!');
+        else:
+            return redirect('reports')
+            ->with('status', 'Error!!');
+        endif;
     }
 
     /**
