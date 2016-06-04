@@ -23,21 +23,7 @@
     <link href="css/custom.css" rel="stylesheet">
   </head>
 
-  <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
-       
-            <div class="clearfix"></div>
-
-  
-
-
-          </div>
-        </div>
-
         <!-- page content -->
-        <div class="right_col" role="main">
-          <div class="">
 
             <div class="page-title">
               <div class="title_left">
@@ -285,17 +271,9 @@
 
                       </div>
                       <!-- /CONTENT MAIL -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+           
         <!-- /page content -->
 
-      </div>
-    </div>
 
     
 
