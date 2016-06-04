@@ -184,7 +184,7 @@
                     </li>
                     <li>
                       <div class="text-center">
-                        <a href="inbox.html">
+                        <a href="{{ url('/notifications.index') }}">
                           <strong>See All Alerts</strong>
                           <i class="fa fa-angle-right"></i>
                         </a>
