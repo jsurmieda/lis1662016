@@ -6,6 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddAddressAndContactToOriginofficesTable' => $baseDir . '/database/migrations/2016_06_05_150051_add_address_and_contact_to_originoffices_table.php',
+    'AddAddressAndContactToRegionalofficesTable' => $baseDir . '/database/migrations/2016_06_05_145859_add_address_and_contact_to_regionaloffices_table.php',
+    'AddRoleIdToUsersTable' => $baseDir . '/database/migrations/2016_06_03_004515_add_role_id_to_users_table.php',
+    'AddUserIdToCasedescriptionTable' => $baseDir . '/database/migrations/2016_06_03_005740_add_user_id_to_casedescription_table.php',
+    'AddUserIdToCasereportsTable' => $baseDir . '/database/migrations/2016_06_03_004522_add_user_id_to_casereports_table.php',
+    'AddUserIdToPersonsTable' => $baseDir . '/database/migrations/2016_06_03_005723_add_user_id_to_persons_table.php',
     'CreateArticlesTable' => $baseDir . '/database/migrations/2016_05_17_113309_create_articles_table.php',
     'CreateArticletypesTable' => $baseDir . '/database/migrations/2016_05_18_144300_create_articletypes_table.php',
     'CreateCadtconditionsTable' => $baseDir . '/database/migrations/2016_05_19_081719_create_cadtconditions_table.php',
@@ -14,6 +20,8 @@ return array(
     'CreateCasereportsTable' => $baseDir . '/database/migrations/2016_05_19_081858_create_casereports_table.php',
     'CreateCasetypesTable' => $baseDir . '/database/migrations/2016_05_19_080237_create_casetypes_table.php',
     'CreateNotequalifiersTable' => $baseDir . '/database/migrations/2016_05_19_080745_create_notequalifiers_table.php',
+    'CreateNotificationUserPivotTable' => $baseDir . '/database/migrations/2016_06_04_015654_create_notification_user_pivot_table.php',
+    'CreateNotificationsTable' => $baseDir . '/database/migrations/2016_06_04_015622_create_notifications_table.php',
     'CreateOriginofficesTable' => $baseDir . '/database/migrations/2016_05_19_081151_create_originoffices_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreatePersonsTable' => $baseDir . '/database/migrations/2016_05_19_082839_create_persons_table.php',
@@ -490,7 +498,6 @@ return array(
     'PHP_Token_XOR_EQUAL' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_YIELD' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_YIELD_FROM' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
-    'Roles' => $baseDir . '/database/migrations/2016_06_04_044622_roles.php',
     'SebastianBergmann\\Comparator\\ArrayComparator' => $vendorDir . '/sebastian/comparator/src/ArrayComparator.php',
     'SebastianBergmann\\Comparator\\Comparator' => $vendorDir . '/sebastian/comparator/src/Comparator.php',
     'SebastianBergmann\\Comparator\\ComparisonFailure' => $vendorDir . '/sebastian/comparator/src/ComparisonFailure.php',
