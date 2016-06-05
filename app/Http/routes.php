@@ -59,4 +59,5 @@ Route::group(['middleware' => 'auth'], function()
 {
 Route::resource('reports', 'ReportController');
 Route::resource('persons', 'PersonController');
+Route::resource('offices', 'OfficeController');
 });

@@ -26,46 +26,69 @@
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>NCIP Offices Masterlist</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  @foreach($regionofficeLists as $regionofficeList)
+                  <!-- Regional Office -->
+                  <div class="x_title">
+                    <strong>{!! $regionofficeList->region_name!!}</strong>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <p class="text-muted font-13 m-b-30">
-                      DataTables has most features enabled by default, so all you need to do to use it with your own tables is to call the construction function: <code>$().DataTable();</code>
-                    </p>
-                    <table id="datatable" class="table table-striped table-bordered">
+                  <table id="region_info" class="table table-striped table-bordered">
                       <thead>
-                        <tr>
-                          <th>Case ID</th>
-                          <th>Date Encoded</th>
-                          <th>Incident Location</th>
-                          <th>Controls</th>
+                        <tr class="success">
+                          <th>Address</th>
+                          <th>Mandate</th>
+                          <th>Contact Information</th>
+                          <th>Website</th>
                         </tr>
+                        
                       </thead>
-
                       <tbody>
-                      @foreach($casereportLists as $casereport)
                         <tr>
-                          <td>{!! $casereport->id!!}</td>
-                          <td>{!! $casereport->receiptDate!!}</td>
-                          <td>{!! $casereport->incidentLocation!!}</td>
-                          <td>
-                          	<a href="{{ url('reports/'.$casereport->id) }}"><i class="fa fa-eye"></i></a>
-                            <a href="{{ url('reports/'.$casereport->id.'/edit') }}"><i class="fa fa-pencil"></i></a>
-                            <a href="{{ url('reports/') }}"><i class="fa fa-trash"></i></a>
-                          </td>
+                          <td>Isla Bato-Bato</td>
+                          <td>Ang maglingkod sa bayan</td>
+                          <td>(02)889-2222</td>
+                          <td><a href="www.sample.com">www.sample.com</a></td>
                         </tr>
-                       @endforeach
                       </tbody>
                     </table>
+                  <em>Community Service Centers under {!! $regionofficeList->region_name!!}</em>
+                  <table id="datatable" class="table table-striped table-bordered">
+                      <thead>
+                        <tr class="danger">
+                          <th>CSC ID</th>
+                          <th>CSC Name</th>
+                          <th>Address</th>
+                          <th>Contact Information</th>
+                          <th>Regional Office</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      @foreach($officeLists as $officeList)
+                          @if($officeList->regionalOffice_id == $regionofficeList->id)
+                          <tr>
+                            <td>{!! $officeList->id!!}</td>
+                            <td>{!! $officeList->csc_name!!}</td>
+                            <td>Mock Address</td>
+                            <td>Mock Numbers</td>
+                            <td>{!! $officeList->regionalOffice_id!!}</td>
+                          </tr>
+                          @else
+                          @endif
+                      </tbody>
+                      @endforeach
+                    </table>
+                  <hr>
                   </div>
+                  <!-- /Regional Office -->
+                  @endforeach
                 </div>
               </div>
+            </div>
+            <div class="text-center">
+              {!! $regionofficeLists->links();!!}
             </div>
     	</div>
 

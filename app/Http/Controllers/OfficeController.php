@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Originoffice;
+use App\Regionaloffice;
 use App\Http\Requests;
 
 class OfficeController extends Controller
@@ -16,6 +17,9 @@ class OfficeController extends Controller
     public function index()
     {
         //
+        $regionofficeLists = Regionaloffice::paginate(3);
+        $officeLists = Originoffice::paginate(25);
+        return view('offices.index', compact('officeLists','regionofficeLists'));
     }
 
     /**
