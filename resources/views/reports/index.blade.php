@@ -35,9 +35,9 @@
                   <div class="x_content">
                     <p class="text-muted font-13 m-b-30">
                       @if (count($casereportLists) === 1)
-                          {!! count($casereportLists)!!} record found
+                          <em>{!! count($casereportLists)!!} record found</em>
                       @else (count($casereportLists) > 1)
-                          {!! count($casereportLists)!!} records found
+                          <em>{!! count($casereportLists)!!} records found</em>
                       @endif
                     </p>
                     <table id="datatable" class="table table-striped table-bordered">
@@ -60,7 +60,7 @@
                           	<a href="{{ url('reports/'.$casereport->id) }}"><i class="fa fa-eye"></i></a>
                             <a href="{{ url('reports/'.$casereport->id.'/edit') }}"><i class="fa fa-pencil"></i></a>
                            {{ Form::open(['method' => 'DELETE', 'action' => ['ReportController@destroy', $casereport->id]]) }} 
-                           {{ Form::submit('Delete', ['class' => 'fa fa-trash']) }} 
+                           {{ Form::submit('Delete',['class' => 'fa fa-trash']) }} 
                            {{ Form::close() }}
                           </td>
                         </tr>

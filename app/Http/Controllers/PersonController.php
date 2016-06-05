@@ -8,6 +8,9 @@ use App\Http\Requests;
 use App\Person;
 use App\Casedescription;
 use App\Tribe;
+use App\Casetype;
+use App\Relationship;
+use App\Originoffice;
 use App\Http\Controllers\Controller;
 
 class PersonController extends Controller
@@ -32,6 +35,11 @@ class PersonController extends Controller
     public function create()
     {
         //
+        $tribes = Tribe::lists('tribeName', 'id');
+        $casetypes = Casetype::lists('casetypeName', 'id');
+        $relations = Relationship::lists('rel_type', 'id');
+        $offices = Originoffice::lists('csc_name', 'id');
+        return view('persons.create', compact('tribes', 'casetypes', 'relations', 'offices'));
     }
 
     /**

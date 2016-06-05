@@ -63,6 +63,7 @@
                        @endforeach
                       </tbody>
                     </table>
+                    <a href="{{ url('persons/create') }}"><i class="fa fa-plus"></i> Register Indigent</a>
                   </div>
                 </div>
               </div>

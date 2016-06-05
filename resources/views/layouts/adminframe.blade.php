@@ -212,7 +212,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            National Commission on Indigenous People. (c) 2016
+            © 2016 LIS 166 Students. All Rights Reserved.
           </div>
           <div class="clearfix"></div>
         </footer>
