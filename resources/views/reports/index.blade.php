@@ -54,7 +54,7 @@
                       @foreach($casereportLists as $casereport)
                         <tr>
                           <td>{!! $casereport->id!!}</td>
-                          <td>{!! $casereport->receiptDate!!}</td>
+                          <td>{!! date('F d, Y', strtotime($casereport->receiptDate))!!}</td>
                           <td>{!! $casereport->incidentLocation!!}</td>
                           <td>
                           	<a href="{{ url('reports/'.$casereport->id) }}"><i class="fa fa-eye"></i></a>

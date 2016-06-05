@@ -47,7 +47,7 @@
                         </tr>
                         <tr>
                           <td>Date Encoded</td>
-                          <td><input class="form-control" id="receiptDate" type="text" placeholder="{!! $casereports->receiptDate!!}" readonly></td>
+                          <td><input class="form-control" id="receiptDate" type="text" placeholder="{!! date('F d, Y', strtotime($casereports->receiptDate))!!}" readonly></td>
                         </tr>
                         <tr>
                           <td>Incident Location</td>
@@ -95,7 +95,7 @@
                           @foreach($casenotes as $casenote)
                             <div class="form-group">
                               <div class="input-group">
-                                <div class="input-group-addon">{!! $casenote->date!!}</div>
+                                <div class="input-group-addon">{!! date('F d, Y', strtotime($casenote->date))!!}</div>
                                 <input type="text" class="form-control" id="date" placeholder="{!! $casenote->notes!!}" readonly>
                                 <div class="input-group-addon">{!! $casenote->noteType!!}</div>
                               </div>
