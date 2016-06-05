@@ -29,15 +29,13 @@
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
                     </ul>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
-                        <tr>
+                        <tr class="info">
                           <th colspan=2>Person Information</th>
                         </tr>
                       </thead>
@@ -72,7 +70,7 @@
                     </table>
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
-                        <tr>
+                        <tr class="danger">
                           <th colspan=2>Case Records</th>
                         </tr>
                       </thead>

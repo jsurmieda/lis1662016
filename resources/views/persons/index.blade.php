@@ -40,7 +40,7 @@
                     </p>
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
-                        <tr>
+                        <tr class="success">
                           <th>ID</th>
                           <th>Name</th>
                           <th>Address</th>

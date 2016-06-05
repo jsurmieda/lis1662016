@@ -29,8 +29,6 @@
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
                     </ul>
                     <div class="clearfix"></div>
                   </div>
@@ -44,7 +42,7 @@
                     </p>
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
-                        <tr>
+                        <tr class="success">
                           <th>Case ID</th>
                           <th>Date Encoded</th>
                           <th>Incident Location</th>

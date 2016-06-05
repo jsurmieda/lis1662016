@@ -44,7 +44,7 @@
     </label>
     <div class="col-md-6 col-sm-6 col-xs-12">
       <!--<input type="text" id="tribeName" required="required" class="form-control col-md-7 col-xs-12">-->
-      {!! Form::select('tribe_id', $tribes) !!}
+      {!! Form::select('tribe_id', $tribes, null,['class' => 'form-control']) !!}
     </div>
   </div>
   <div class="form-group">
@@ -52,6 +52,6 @@
     </label>
     <div class="col-md-6 col-sm-6 col-xs-12">
       <!--<input type="text" id="tribeName" required="required" class="form-control col-md-7 col-xs-12">-->
-      {!! Form::select('rel_id', $relations) !!}
+      {!! Form::select('rel_id', $relations, null,['class' => 'form-control']) !!}
     </div>
   </div>

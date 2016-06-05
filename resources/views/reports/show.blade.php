@@ -29,19 +29,13 @@
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
                     </ul>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <p class="text-muted font-13 m-b-30">
-                      DataTables has most features enabled by default, so all you need to do to use it with your own tables is to call the construction function: <code>$().DataTable();</code>
-                    </p>
-                    <hr>
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
-                        <tr>
+                        <tr class="info">
                           <th colspan=2>Case Information</th>
                         </tr>
                       </thead>
@@ -90,7 +84,7 @@
                     </table>
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
-                        <tr>
+                        <tr class="danger">
                           <th colspan=2>Case Notes</th>
                         </tr>
                       </thead>

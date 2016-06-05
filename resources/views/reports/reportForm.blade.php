@@ -11,7 +11,7 @@
     </label>
     <div class="col-md-6 col-sm-6 col-xs-12">
       <!--<input type="text" id="tribeName" required="required" class="form-control col-md-7 col-xs-12">-->
-      {!! Form::select('casetype_id', $casetypes) !!}
+      {!! Form::select('casetype_id', $casetypes, null,['class' => 'form-control']) !!}
     </div>
   </div>
   <div class="form-group">
@@ -43,6 +43,6 @@
     </label>
     <div class="col-md-6 col-sm-6 col-xs-12">
       <!-- <input type="text" id="csc_name" required="required" class="form-control col-md-7 col-xs-12">-->
-      {!! Form::select('originoffice_id', $offices) !!}
+      {!! Form::select('originoffice_id', $offices, null,['class' => 'form-control']) !!}
     </div>
   </div>
