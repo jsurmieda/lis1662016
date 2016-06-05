@@ -47,10 +47,10 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td>Isla Bato-Bato</td>
-                          <td>Ang maglingkod sa bayan</td>
+                          <td>{!! $regionofficeList->address!!}</td>
+                          <td>{!! $regionofficeList->mandate!!}</td>
                           <td>(02)889-2222</td>
-                          <td><a href="www.sample.com">www.sample.com</a></td>
+                          <td><a href="{!! $regionofficeList->website!!}">{!! $regionofficeList->website!!}</a></td>
                         </tr>
                       </tbody>
                     </table>
@@ -62,7 +62,6 @@
                           <th>CSC Name</th>
                           <th>Address</th>
                           <th>Contact Information</th>
-                          <th>Regional Office</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -71,9 +70,8 @@
                           <tr>
                             <td>{!! $officeList->id!!}</td>
                             <td>{!! $officeList->csc_name!!}</td>
-                            <td>Mock Address</td>
-                            <td>Mock Numbers</td>
-                            <td>{!! $officeList->regionalOffice_id!!}</td>
+                            <td>{!! $officeList->address!!}</td>
+                            <td>{!! $officeList->contact_number!!}</td>
                           </tr>
                           @else
                           @endif

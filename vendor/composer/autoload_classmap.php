@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'AddAddressAndContactToOriginofficesTable' => $baseDir . '/database/migrations/2016_06_05_150051_add_address_and_contact_to_originoffices_table.php',
     'AddAddressAndContactToRegionalofficesTable' => $baseDir . '/database/migrations/2016_06_05_145859_add_address_and_contact_to_regionaloffices_table.php',
+    'AddMandateToRegionalofficesTable' => $baseDir . '/database/migrations/2016_06_05_204117_add_mandate_to_regionaloffices_table.php',
     'AddRoleIdToUsersTable' => $baseDir . '/database/migrations/2016_06_03_004515_add_role_id_to_users_table.php',
     'AddUserIdToCasedescriptionTable' => $baseDir . '/database/migrations/2016_06_03_005740_add_user_id_to_casedescription_table.php',
     'AddUserIdToCasereportsTable' => $baseDir . '/database/migrations/2016_06_03_004522_add_user_id_to_casereports_table.php',
