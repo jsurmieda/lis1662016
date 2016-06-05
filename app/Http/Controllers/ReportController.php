@@ -114,7 +114,7 @@ class ReportController extends Controller
         $casedescriptions=Casedescription::where('casereport_id','=', $id)
             ->join('persons','casedescriptions.person_id','=','persons.id')
             ->join('relationships','casedescriptions.relationship_id','=','relationships.id')
-            ->select('casedescriptions.*','persons.lastname as lastname','persons.firstname as firstname' ,'persons.middlename as middlename','relationships.rel_type as rel_type')
+            ->select('casedescriptions.*','persons.lastname as lastname','persons.firstname as firstname' ,'persons.middlename as middlename','persons.suffix as suffix','relationships.rel_type as rel_type')
             ->get();
         $casenotes=Casenote::where('casereport_id','=', $id)
             ->join('notequalifiers','casenotes.notequalifier_id','=','notequalifiers.id')

@@ -464,6 +464,19 @@
       gauge.setTextField(document.getElementById("gauge-text"));
     </script>
     <!-- /gauge.js -->
-    
+    <!-- add Casenotes -->
+    <script>
+    function addCaseNotes() {
+        alert("Add Case Notes Form Here!");
+    }
+    </script>
+    <!-- /add Casenotes -->
+    <!-- add PersonsInvolved -->
+    <script>
+    function addPersonsInvolved() {
+        alert("Add Person Involved Form Here!");
+    }
+    </script>
+    <!-- /add PersonsInvolved -->
   </body>
 </html>

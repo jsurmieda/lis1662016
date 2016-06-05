@@ -49,25 +49,25 @@
                       <tbody>
                         <tr>
                           <td>Case ID</td>
-                          <td><input class="form-control" id="disabledInput" type="text" placeholder="{!! $casereports->id!!}" readonly></td>
+                          <td><input class="form-control" id="id" type="text" placeholder="{!! $casereports->id!!}" readonly></td>
                         </tr>
                         <tr>
                           <td>Date Encoded</td>
-                          <td><input class="form-control" id="disabledInput" type="text" placeholder="{!! $casereports->receiptDate!!}" readonly></td>
+                          <td><input class="form-control" id="receiptDate" type="text" placeholder="{!! $casereports->receiptDate!!}" readonly></td>
                         </tr>
                         <tr>
                           <td>Incident Location</td>
-                          <td><input class="form-control" id="disabledInput" type="text" placeholder="{!! $casereports->incidentLocation!!}" readonly></td>
+                          <td><input class="form-control" id="incidentLocation" type="text" placeholder="{!! $casereports->incidentLocation!!}" readonly></td>
                         </tr>
                         <tr>
                           <td>Case Type</td>
                           <td>@foreach($casetypes as $casetype)
-                          <input class="form-control" id="disabledInput" type="text" placeholder="{!! $casetype->casetypeName!!}" readonly>@endforeach</td>
+                          <input class="form-control" id="casetype" type="text" placeholder="{!! $casetype->casetypeName!!}" readonly>@endforeach</td>
                         </tr>
                         <tr>
                           <td>Persons Involved</td>
                           <td>
-                          <table id="datatable" class="table table-striped table-bordered">
+                          <table id="casedescription" class="table table-striped table-bordered">
                             <tr>
                               <th>Name</th>
                               <th>Involvement to the Case</th>
@@ -75,14 +75,14 @@
                             @foreach($casedescriptions as $casedescription)
                             <tr>
                               <td>
-                                {!! $casedescription->lastname!!}, {!! $casedescription->firstname!!} {!! $casedescription->middlename!!}
+                                {!! $casedescription->lastname!!}, {!! $casedescription->firstname!!} {!! $casedescription->middlename!!} {!! $casedescription->suffix!!}
                               </td>
                               <td>
                                 {!! $casedescription->rel_type!!}
                               </td>
                             </tr>
                             @endforeach                             
-
+                            <a onclick="addPersonsInvolved()" }}"><i class="fa fa-plus"></i> Add Person Involved</a>
                           </table>
                           </td>
                         </tr>
@@ -110,6 +110,7 @@
                           </td>
                         </tr>
                       </tbody>
+                      <a onclick="addCaseNotes()" }}"><i class="fa fa-plus"></i> Add New Case Notes</a>
                     </table>
                   </div>
                 </div>

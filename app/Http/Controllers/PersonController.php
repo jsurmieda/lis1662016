@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Person;
+use App\Tribe;
 use App\Http\Controllers\Controller;
 
 class PersonController extends Controller
@@ -52,6 +53,13 @@ class PersonController extends Controller
     public function show($id)
     {
         //
+        $tribes = Person::where('persons.id','=', $id)
+            ->join('tribes','persons.tribe_id','=','tribes.id')
+            ->select('persons.*','tribes.tribeName as tribeName')
+            ->get();
+        $persons = Person::findorFail($id);
+        //dd($tribes);
+        return view('persons.show',compact('persons', 'tribes'));
     }
 
     /**

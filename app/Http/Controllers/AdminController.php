@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Casereport;
+use App\Person;
+use App\Casetype;
 use App\Http\Requests;
 
 
@@ -22,8 +24,18 @@ class AdminController extends Controller
     {
         //
         $casereportcounts = Casereport::count();
-        //dd($casereportcount);
-        return view('admin.index', compact('casereportcounts'));
+        $personcounts = Person::count();
+        //$casetypecounts = CaseReport::select(CaseReport::Raw('casetype_id, COUNT(*) as count'))
+        //    ->groupBy('casetype_id');
+        //$casetypes = Casereport::join('casetypes','casereports.casetype_id','=','casetypes.id')
+         //   ->select('casereports.*','casetypes.casetypeName as casetypeName')
+        //    ->groupBy('casereports.casetype_id')
+        $casetypes = Casereport::join('casetypes','casereports.casetype_id','=','casetypes.id')
+            ->select('casereports.*','casetypes.casetypeName as casetypeName')
+            ->groupBy('casetypeName')
+            ->get();
+        //dd($casetypes);
+        return view('admin.index', compact('casereportcounts','personcounts','casetypes'));
     }
 
     /**
