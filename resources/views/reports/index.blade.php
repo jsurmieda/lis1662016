@@ -44,7 +44,7 @@
                       <thead>
                         <tr class="success">
                           <th>Case ID</th>
-                          <th>Date Encoded</th>
+                          <th>Date Reported</th>
                           <th>Incident Location</th>
                           <th>Controls</th>
                         </tr>
