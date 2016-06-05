@@ -25,7 +25,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Case Reports Masterlist</h2>
+                    <h2>{!! $persons->lastname!!}, {!! $persons->firstname!!} {!! $persons->middlename!!} {!! $persons->suffix!!}</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -66,6 +66,49 @@
                           <td>Tribe</td>
                           <td>@foreach($tribes as $tribe)
                           <input class="form-control" id="tribeName" type="text" placeholder="{!! $tribe->tribeName!!}" readonly>@endforeach</td>
+                        </tr>
+                      </tbody>
+                      <a href="{{ url('persons') }}"><i class="fa fa-backward"></i> Return to Indigents Masterlist</a>
+                    </table>
+                    <table id="datatable" class="table table-striped table-bordered">
+                      <thead>
+                        <tr>
+                          <th colspan=2>Case Records</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td>
+                          <table id="caserecords" class="table table-striped table-bordered">
+                            <tr>
+                              <th>Case ID</th>
+                              <th>Case Type</th>
+                              <th>Incident Date</th>
+                              <th>Relationship to the Case</th>
+                              <th>Record Origin</th>
+                            </tr>
+                            @foreach($caserecords as $caserecord)
+                            <tr>
+                              <td>
+                                {!! $caserecord->casereport_id!!}
+                              </td>
+                              <td>
+                                {!! $caserecord->casetype_id!!}
+                              </td>
+                              <td>
+                                {!! $caserecord->incidentDate!!}
+                              </td>
+                              <td>
+                                {!! $caserecord->rel_type!!}
+                              </td>
+                              <td>
+                                {!! $caserecord->originoffice_id!!}
+                              </td>
+                            </tr>
+                            @endforeach                             
+                          </table>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
