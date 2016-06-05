@@ -9,7 +9,7 @@
 
     <title>NCIP Website</title>
 	  <!--favicon-->
-    <link rel="shortcut icon" href="{{{ asset('ncip.ico') }}}">
+    <link rel="shortcut icon" href="{{ asset('ncip.ico') }}">
 
     <!-- Bootstrap -->
     <link href="{{ asset('vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -26,7 +26,7 @@
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
   </head>
 
-  <body class="nav-md">
+  <body class="nav-md" onload="startTime()">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -40,7 +40,7 @@
             <!-- menu profile quick info -->
             <div class="profile">
               <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="{{ asset('images/img.jpg') }}" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
@@ -111,7 +111,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="#" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="" alt="">{{ Auth::user()->name }}
+                    <img src="{{ asset('images/img.jpg') }}" alt="">{{ Auth::user()->name }}
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -212,7 +212,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            National Commission on Indigenous People. (c) 2016
+            © 2016 LIS 166 Students. All Rights Reserved.
           </div>
           <div class="clearfix"></div>
         </footer>
@@ -273,82 +273,6 @@
           });
         </script>
 
-    <!-- Flot -->
-    <script>
-      $(document).ready(function() {
-        var data1 = [
-          [gd(2012, 1, 1), 17],
-          [gd(2012, 1, 2), 74],
-          [gd(2012, 1, 3), 6],
-          [gd(2012, 1, 4), 39],
-          [gd(2012, 1, 5), 20],
-          [gd(2012, 1, 6), 85],
-          [gd(2012, 1, 7), 7]
-        ];
-
-        var data2 = [
-          [gd(2012, 1, 1), 82],
-          [gd(2012, 1, 2), 23],
-          [gd(2012, 1, 3), 66],
-          [gd(2012, 1, 4), 9],
-          [gd(2012, 1, 5), 119],
-          [gd(2012, 1, 6), 6],
-          [gd(2012, 1, 7), 9]
-        ];
-        $("#canvas_dahs").length && $.plot($("#canvas_dahs"), [
-          data1, data2
-        ], {
-          series: {
-            lines: {
-              show: false,
-              fill: true
-            },
-            splines: {
-              show: true,
-              tension: 0.4,
-              lineWidth: 1,
-              fill: 0.4
-            },
-            points: {
-              radius: 0,
-              show: true
-            },
-            shadowSize: 2
-          },
-          grid: {
-            verticalLines: true,
-            hoverable: true,
-            clickable: true,
-            tickColor: "#d5d5d5",
-            borderWidth: 1,
-            color: '#fff'
-          },
-          colors: ["rgba(38, 185, 154, 0.38)", "rgba(3, 88, 106, 0.38)"],
-          xaxis: {
-            tickColor: "rgba(51, 51, 51, 0.06)",
-            mode: "time",
-            tickSize: [1, "day"],
-            //tickLength: 10,
-            axisLabel: "Date",
-            axisLabelUseCanvas: true,
-            axisLabelFontSizePixels: 12,
-            axisLabelFontFamily: 'Verdana, Arial',
-            axisLabelPadding: 10
-          },
-          yaxis: {
-            ticks: 8,
-            tickColor: "rgba(51, 51, 51, 0.06)",
-          },
-          tooltip: false
-        });
-
-        function gd(year, month, day) {
-          return new Date(year, month - 1, day).getTime();
-        }
-      });
-    </script>
-    <!-- /Flot -->
-
     <!-- jVectorMap -->
     <script src="{{ asset('js/maps/jquery-jvectormap-world-mill-en.js') }}"></script>
     <script src="{{ asset('js/maps/jquery-jvectormap-us-aea-en.js') }}"></script>
@@ -394,49 +318,6 @@
       });
     </script>
     <!-- /Skycons -->
-
-    <!-- Doughnut Chart -->
-    <script>
-      $(document).ready(function(){
-        var options = {
-          legend: false,
-          responsive: false
-        };
-
-        new Chart(document.getElementById("canvas1"), {
-          type: 'doughnut',
-          tooltipFillColor: "rgba(51, 51, 51, 0.55)",
-          data: {
-            labels: [
-              "Symbian",
-              "Blackberry",
-              "Other",
-              "Android",
-              "IOS"
-            ],
-            datasets: [{
-              data: [15, 20, 30, 10, 30],
-              backgroundColor: [
-                "#BDC3C7",
-                "#9B59B6",
-                "#E74C3C",
-                "#26B99A",
-                "#3498DB"
-              ],
-              hoverBackgroundColor: [
-                "#CFD4D8",
-                "#B370CF",
-                "#E95E4F",
-                "#36CAAB",
-                "#49A9EA"
-              ]
-            }]
-          },
-          options: options
-        });
-      });
-    </script>
-    <!-- /Doughnut Chart -->
     
     <!-- gauge.js -->
     <script>
@@ -478,5 +359,28 @@
     }
     </script>
     <!-- /add PersonsInvolved -->
+    <!-- /Time -->
+    <script>
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        var date = today.getDate();
+        var year = today.getFullYear();
+        ampm = today.getHours() >= 12 ? 'pm' : 'am';
+        months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('txt').innerHTML =
+        months[today.getMonth()] + ' ' + date + ', ' + year + ' ' + h + ":" + m + ":" + s + " " + ampm;
+        var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
+    </script>
+    <!-- /time -->
   </body>
 </html>

@@ -24,6 +24,7 @@ class AdminController extends Controller
     {
         //
         $casereportcounts = Casereport::count();
+        $casereportLists = Casereport::paginate(10);
         $personcounts = Person::count();
         //$casetypecounts = CaseReport::select(CaseReport::Raw('casetype_id, COUNT(*) as count'))
         //    ->groupBy('casetype_id');
@@ -35,7 +36,7 @@ class AdminController extends Controller
             ->groupBy('casetypeName')
             ->get();
         //dd($casetypes);
-        return view('admin.index', compact('casereportcounts','personcounts','casetypes'));
+        return view('admin.index', compact('casereportcounts','casereportLists','personcounts','casetypes'));
     }
 
     /**
