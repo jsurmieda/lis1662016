@@ -86,6 +86,8 @@ class ReportController extends Controller
             'person_id' => $person_id,
             'relationship_id' => $request->rel_id,
             'casereport_id' => $casereport_id,
+            'cadtcondition_id' => $cadt_id,
+
         ]);
 
         $casereportLists = Casereport::paginate(10);
@@ -127,6 +129,7 @@ class ReportController extends Controller
     public function edit($id)
     {
         //
+      
     }
 
     /**

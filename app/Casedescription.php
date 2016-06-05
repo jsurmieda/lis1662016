@@ -10,7 +10,7 @@ class Casedescription extends Model
 
     protected $table='Casedescriptions';
     protected $fillable=[
-        'person_id','casereport_id','relationship_id', 'user_id',
+        'person_id','relationship_id', 'user_id','casereport_id','cadtcondition_id',
         ];
 
     public function Casereport()
@@ -21,6 +21,11 @@ class Casedescription extends Model
     public function Person()
     {
     	return $this->hasOne('App\Person', 'id');
+    }
+    
+    public function Cadtcondition()
+    {
+        return $this->belongsTo('App\Cadtcondition');
     }
 
     public function Relationship()
