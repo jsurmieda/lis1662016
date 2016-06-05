@@ -20,7 +20,7 @@ class Casedescription extends Model
 
     public function Person()
     {
-    	return $this->hasOne('App\Person', 'id');
+    	return $this->hasOne('App\Person');
     }
     
     public function Cadtcondition()

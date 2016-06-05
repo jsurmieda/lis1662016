@@ -13,4 +13,9 @@ class Tribe extends Model
     {
     	return $this->hasMany('App\Person');
     }
+
+    public function Tribe()
+    {
+    	return $this->hasOne('App\Tribe');
+    }
 }

@@ -28,8 +28,14 @@ class Casereport extends Model
 
     public function Casetype()
     {
-    	return $this->belongsTo('App\Casetype');
+    	return $this->hasOne('App\Casetype', 'id');
     }
+
+    public function Casenote()
+    {
+        return $this->hasMany('App\Casenote');
+    }
+
     public function Originoffice()
     {
     	return $this->belongsTo('App\Originoffice');
@@ -39,4 +45,10 @@ class Casereport extends Model
 	{
 		return $this->belongsTo('App\User');
 	}
+
+    
+    
+
+
+
 }

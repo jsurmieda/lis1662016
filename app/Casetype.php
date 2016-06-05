@@ -9,6 +9,6 @@ class Casetype extends Model
     //
     public function Casereports()
     {
-    	return $this->hasMany('App\Casereport');
+    	return $this->belongsTo('App\Casereport');
     }
 }

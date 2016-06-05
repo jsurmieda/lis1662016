@@ -5,7 +5,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Case Reports</h3>
+                <h3>Database</h3>
               </div>
               <div class="title_right">
                 <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
@@ -25,48 +25,44 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-
-                  @if (session('status'))
-                  <div class= 'alert alert-danger'>
-                    {{session('status')}}
-                  </div>
-                  @endif
-
-                    <h2>Case Reports Masterlist</h2>
+                    <h2>Indigents Masterlist</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
+                  @if (session('status'))
+                  <div class= 'alert alert-danger'>
+                    {{session('status')}}
+                  </div>
+                  @endif
                     <p class="text-muted font-13 m-b-30">
-                      @if (count($casereportLists) === 1)
-                          {!! count($casereportLists)!!} record found
-                      @else (count($casereportLists) > 1)
-                          {!! count($casereportLists)!!} records found
-                      @endif
+                      Masterlist of registered Indigenous People in your office.
                     </p>
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
                         <tr class="success">
-                          <th>Case ID</th>
-                          <th>Date Encoded</th>
-                          <th>Incident Location</th>
+                          <th>ID</th>
+                          <th>Name</th>
+                          <th>Address</th>
                           <th>Controls</th>
                         </tr>
                       </thead>
 
                       <tbody>
-                      @foreach($casereportLists as $casereport)
+                      @foreach($personLists as $person)
                         <tr>
-                          <td>{!! $casereport->id!!}</td>
-                          <td>{!! $casereport->receiptDate!!}</td>
-                          <td>{!! $casereport->incidentLocation!!}</td>
+                          <td>{!! $person->id!!}</td>
+                          <td>{!! $person->lastname!!}, {!! $person->firstname!!} {!! $person->middlename!!}</td>
+                          <td>{!! $person->address!!}</td>
                           <td>
-                          	<a href="{{ url('reports/'.$casereport->id) }}"><i class="fa fa-eye"></i></a>
-                            <a href="{{ url('reports/'.$casereport->id.'/edit') }}"><i class="fa fa-pencil"></i></a>
-                           {{ Form::open(['method' => 'DELETE', 'action' => ['ReportController@destroy', $casereport->id]]) }} 
+                          	<a href="{{ url('persons/'.$person->id) }}"><i class="fa fa-eye"></i></a>
+                            <a href="{{ url('reports/'.$person->id.'/edit') }}"><i class="fa fa-pencil"></i></a>
+                           {{ Form::open(['method' => 'DELETE', 'action' => ['PersonController@destroy', $person->id]]) }} 
                            {{ Form::submit('Delete', ['class' => 'fa fa-btn fa-trash']) }} 
                            {{ Form::close() }}
                           </td>
