@@ -61,8 +61,10 @@ class PersonController extends Controller
         $persons = Person::findorFail($id);
         $caserecords=Casedescription::where('person_id','=', $id)
             ->join('casereports','casedescriptions.casereport_id','=','casereports.id')
+            ->join('casetypes','casereports.casetype_id','=','casetypes.id')
             ->join('relationships','casedescriptions.relationship_id','=','relationships.id')
-            ->select('casedescriptions.*','relationships.rel_type as rel_type','casedescriptions.casereport_id as casereport_id' ,'casereports.originoffice_id as originoffice_id', 'casereports.incidentDate as incidentDate', 'casereports.casetype_id as casetype_id')
+            ->join('originoffices','casereports.originoffice_id','=','originoffices.id')
+            ->select('casedescriptions.*','relationships.rel_type as rel_type','casedescriptions.casereport_id as casereport_id' ,'originoffices.csc_name as csc_name', 'casereports.incidentDate as incidentDate', 'casetypes.casetypeName as casetypeName')
             ->get();
         //dd($caserecords);
         return view('persons.show',compact('persons', 'tribes', 'caserecords'));

@@ -94,7 +94,7 @@
                                 {!! $caserecord->casereport_id!!}
                               </td>
                               <td>
-                                {!! $caserecord->casetype_id!!}
+                                {!! $caserecord->casetypeName!!}
                               </td>
                               <td>
                                 {!! $caserecord->incidentDate!!}
@@ -103,7 +103,7 @@
                                 {!! $caserecord->rel_type!!}
                               </td>
                               <td>
-                                {!! $caserecord->originoffice_id!!}
+                                {!! $caserecord->csc_name!!}
                               </td>
                             </tr>
                             @endforeach                             
