@@ -28,11 +28,7 @@
     </label>
     <div class="col-md-6 col-sm-6 col-xs-12">
       <!-- <input type="text" id="suffix" required="required" class="form-control col-md-7 col-xs-12">-->
-<<<<<<< HEAD
       {!! Form::text('suffix',null,['class'=>'form-control col-md-7 col-xs-12']) !!}
-=======
-      {!! Form::text('suffix',null,[ 'class'=>'form-control col-md-7 col-xs-12']) !!}
->>>>>>> f40d3913f37e2b619386518423cb0c26dee436cf
     </div>
   </div>
   <div class="form-group">

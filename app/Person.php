@@ -13,7 +13,7 @@ class Person extends Model
 
     protected $table = 'persons';
     protected $fillable = [
-    	'firstname','middlename','lastname','suffix','address','tribe_id',
+    	'firstname','middlename','lastname','suffix','address','tribe_id', 'user_id',
     	];
 
     public function Casedescription()

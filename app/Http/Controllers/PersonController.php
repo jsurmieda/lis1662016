@@ -51,6 +51,26 @@ class PersonController extends Controller
     public function store(Request $request)
     {
         //
+
+         $person = Person::where('lastname','=',$request->lastname)->where('firstname','=',$request->firstname)->where('middlename','=',$request->middlename)->select('persons.*')->get();
+        //dd($person->count());
+        if($person->isEmpty()):
+            //dd('walang laman!');
+            $request->user()->persons()->create([
+            'firstname' => $request->firstname,
+            'middlename' => $request->middlename,
+            'lastname' => $request->lastname,
+            'suffix' => $request->suffix,
+            'address' => $request->address,
+            'tribe_id' => $request->tribe_id,
+            ]);
+            $person_id = Person::orderBy('created_at', 'desc')->first()->id;
+        else:
+            $person_id = Person::where('lastname','=',$request->lastname)->where('firstname','=',$request->firstname)->where('middlename','=',$request->middlename)->first()->id;            
+        endif;
+
+        $personLists = Person::paginate(10);
+        return view('persons.index', compact('personLists'));
     }
 
     /**

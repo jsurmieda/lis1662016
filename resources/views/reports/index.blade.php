@@ -67,11 +67,7 @@
                           	<a href="{{ url('reports/'.$casereport->id) }}"><i class="fa fa-eye"></i></a>
                             <a href="{{ url('reports/'.$casereport->id.'/edit') }}"><i class="fa fa-pencil"></i></a>
                            {{ Form::open(['method' => 'DELETE', 'action' => ['ReportController@destroy', $casereport->id]]) }} 
-<<<<<<< HEAD
                            {{ Form::submit('Delete', ['class' => 'fa fa-btn fa-trash']) }} 
-=======
-                           {{ Form::submit('Delete',['class' => 'fa fa-trash']) }} 
->>>>>>> 37498776b7912b52385629a43afaffda249bb3cb
                            {{ Form::close() }}
                           </td>
                         </tr>
