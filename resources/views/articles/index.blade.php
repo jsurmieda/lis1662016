@@ -65,7 +65,6 @@
                           <td>{!! $articles->articletitle !!}</td>
                           <td>{!! $articles->user_id !!}</td>
                           <td>{!! date('M j Y g:i A', strtotime($articles->created_at)) !!}</td><!-- should be username -->
-                          <td></td>
                           <td>{!! $articles->mandatory !!}</td>
                           <td> <!-- add help text sa mga ito on hover -->
                           	<h3><a href="{{ url('articles/')}}/{!! $articles->id !!}"><i class="fa fa-eye"></i></a>
