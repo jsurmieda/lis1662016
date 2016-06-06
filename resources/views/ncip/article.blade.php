@@ -3,8 +3,8 @@
 @section('content')
     <section id="article" class="container">
         <div class="center">
-            <h2>ARTICLE</h2>
-            <p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
+            <h2>{!! $newsDetails->articletitle !!}</h2>
+            <!--<p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>-->
         </div>
 
         <div class="blog">
@@ -15,26 +15,27 @@
                             <div class="row">  
                                 <div class="col-xs-12 col-sm-2 text-center">
                                     <div class="entry-meta">
-                                        <span id="publish_date">07  NOV</span>
-                                        <span><i class="fa fa-user"></i> <a href="#"> John Doe</a></span>
+                                        <span><i class="fa fa-user"></i> <a href="#">By {!! $newsDetails->id !!}</a></span><br />
+                                        <span id="publish_date">{!! date('M j Y g:i A', strtotime($newsDetails->created_at)) !!}</span>
+                                        <!--
                                         <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">2 Comments</a></span>
-                                        <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>
+                                        <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>-->
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-10 blog-content">
-                                    <h2>Consequat bibendum quam</h2>
-                                    <p>Curabitur quis libero leo, pharetra mattis eros. Praesent consequat libero eget dolor convallis vel rhoncus magna scelerisque. Donec nisl ante, elementum eget posuere a, consectetur a metus. Proin a adipiscing sapien. Suspendisse vehicula porta lectus vel semper. Nullam sapien elit, lacinia eu tristique non.posuere at mi. Morbi at turpis id urna ullamcorper ullamcorper.</p>
+                                    <!--<h2>Consequat bibendum quam</h2>-->
+                                    <p>{!! $newsDetails->articlebody !!}</p>
 
-                                    <p>Curabitur quis libero leo, pharetra mattis eros. Praesent consequat libero eget dolor convallis vel rhoncus magna scelerisque. Donec nisl ante, elementum eget posuere a, consectetur a metus. Proin a adipiscing sapien. Suspendisse vehicula porta lectus vel semper.</p>
-
+                                    
+                                    <!--
                                     <div class="post-tags">
                                         <strong>Tag:</strong> <a href="#">Cool</a> / <a href="#">Creative</a> / <a href="#">Dubttstep</a>
-                                    </div>
+                                    </div>-->
 
                                 </div>
                             </div>
                         </div><!--/.blog-item-->
-                        
+                        <!--
                         <div class="media reply_section">
                             <div class="pull-left post_reply text-center">
                                 <a href="#"><img src="images/blog/boy.png" class="img-circle" alt="" /></a>
@@ -121,7 +122,7 @@
                                     </div>
                                 </div>
                             </form>     
-                        </div><!--/#contact-page-->
+                        </div>/#contact-page-->
                     </div><!--/.col-md-8-->
 
                 <aside class="col-md-4">
@@ -130,7 +131,7 @@
                                 <input type="text" class="form-control search_box" autocomplete="off" placeholder="Search Here">
                         </form>
                     </div><!--/.search-->
-    				
+    				<!-- RECENT COMMENTS
     				<div class="widget categories">
                         <h3>Recent Comments</h3>
                         <div class="row">
@@ -159,9 +160,9 @@
     							
                             </div>
                         </div>                     
-                    </div><!--/.recent comments-->
+                    </div>/.recent comments-->
                      
-
+                    <!-- Categories
                     <div class="widget categories">
                         <h3>Categories</h3>
                         <div class="row">
@@ -174,10 +175,10 @@
                                 </ul>
                             </div>
                         </div>                     
-                    </div><!--/.categories-->
-    				
+                    </div>/.categories-->
+    				<!-- ARCHIVE
     				<div class="widget archieve">
-                        <h3>Archieve</h3>
+                        <h3>Archive</h3>
                         <div class="row">
                             <div class="col-sm-12">
                                 <ul class="blog_archieve">
@@ -188,8 +189,8 @@
                                 </ul>
                             </div>
                         </div>                     
-                    </div><!--/.archieve-->
-    				
+                    </div>/.archieve-->
+    				<!-- TAG CLOUD
                     <div class="widget tags">
                         <h3>Tag Cloud</h3>
                         <ul class="tag-cloud">
@@ -204,8 +205,8 @@
                             <li><a class="btn btn-xs btn-primary" href="#">Porche</a></li>
                             <li><a class="btn btn-xs btn-primary" href="#">Gadgets</a></li>
                         </ul>
-                    </div><!--/.tags-->
-    				
+                    </div>/.tags-->
+    				<!-- GALLERY
     				<div class="widget blog_gallery">
                         <h3>Our Gallery</h3>
                         <ul class="sidebar-gallery">
@@ -216,7 +217,7 @@
                             <li><a href="#"><img src="images/blog/gallery5.png" alt="" /></a></li>
                             <li><a href="#"><img src="images/blog/gallery6.png" alt="" /></a></li>
                         </ul>
-                    </div><!--/.blog_gallery-->
+                    </div>/.blog_gallery-->
     					
     				
                 </aside>     

@@ -21,7 +21,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $ArticlesCarousel = Article::get();
+        $ArticlesCarousel = Article::where('mandatory','=','1')->orderBy('created_at','desc')->get();
+        //dd($ArticlesCarousel);
         return view('ncip.index', compact ('ArticlesCarousel'));
         //return view('ncip.index');
     }
@@ -46,14 +47,14 @@ class HomeController extends Controller
         return view('ncip.news');
     }
 	
-	public function article()
+	public function article($id)
     {
-        //$newsDetails = Article::findOrFail($id);
+        $newsDetails = Article::findOrFail($id);
 
-        //$records = Article::find($id)->records;
+        $records = Article::find($id)->records;
         #dd($records);
-        //return view('ncip.article', compact('newsDetails', 'records'));
-        return view('ncip.article');
+        return view('ncip.article', compact('newsDetails', 'records'));
+        //return view('ncip.article');
     }
 	
 }
