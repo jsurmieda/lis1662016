@@ -49,7 +49,7 @@
                         <tr>
                           <td>{!! $regionofficeList->address!!}</td>
                           <td>{!! $regionofficeList->mandate!!}</td>
-                          <td>(02)889-2222</td>
+                          <td>{!! $regionofficeList->contact_number!!}</td>
                           <td><a href="{!! $regionofficeList->website!!}">{!! $regionofficeList->website!!}</a></td>
                         </tr>
                       </tbody>
