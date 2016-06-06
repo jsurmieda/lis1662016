@@ -64,7 +64,8 @@ Route::resource('offices', 'OfficeController');
 Route::resource('casenotes', 'CasenoteController');
 Route::get('reports/{reports}/addCaseNotes', 'ReportController@addCaseNotes');
 Route::post('reports/{reports}/saveCaseNotes', 'ReportController@saveCaseNotes');
-
+Route::get('reports/{reports}/addPersons', 'ReportController@addPersons');
+Route::post('reports/{reports}/savePersons', 'ReportController@savePersons');
 Route::resource('articles', 'ArticleController');
 
 });

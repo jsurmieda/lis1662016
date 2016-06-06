@@ -76,7 +76,7 @@
                               </td>
                             </tr>
                             @endforeach                             
-                            <a onclick="addPersonsInvolved()" }}"><i class="fa fa-plus"></i> Add Person Involved</a>
+                            <a href="{{ url('reports/'. $casereports->id .'/addPersons') }}"><i class="fa fa-plus"></i> Add Person Involved</a>
                           </table>
                           </td>
                         </tr>
