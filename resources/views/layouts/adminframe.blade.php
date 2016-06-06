@@ -230,8 +230,6 @@
     <script src="{{ asset('vendors/nprogress/nprogress.js') }}"></script>
     <!-- Chart.js -->
     <script src="{{ asset('vendors/Chart.js/dist/Chart.min.js') }}"></script>
-    <!-- gauge.js -->
-    <script src="{{ asset('vendors/bernii/gauge.js/dist/gauge.min.js') }}"></script>
     <!-- bootstrap-progressbar -->
     <script src="{{ asset('vendors/bootstrap-progressbar/bootstrap-progressbar.min.js') }}"></script>
     <!-- iCheck -->

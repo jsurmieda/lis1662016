@@ -69,6 +69,13 @@ class PersonController extends Controller
             $person_id = Person::where('lastname','=',$request->lastname)->where('firstname','=',$request->firstname)->where('middlename','=',$request->middlename)->first()->id;            
         endif;
 
+        $name = $request->lastname.', '.$request->firstname.' '.$request->middlename.' '.$request->suffix;
+
+        $request->user()->notifications()->create([
+            'subject' => $request->user()->name.' added a new Person',
+            'body' => 'Name: '.$name,
+        ]);
+
         $personLists = Person::paginate(10);
         return view('persons.index', compact('personLists'));
     }

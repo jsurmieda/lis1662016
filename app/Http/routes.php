@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('ncip.index');
-});
+});*/
 //NCIP Main Page Sitemap
+Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
 Route::get('/about', 'HomeController@about');
 Route::get('/news', 'HomeController@news');

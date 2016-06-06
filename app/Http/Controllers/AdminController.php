@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use App\Casereport;
 use App\Person;
 use App\Casetype;
+use App\Regionaloffice;
 use App\Http\Requests;
+use App\Notification;
 
 
 class AdminController extends Controller
@@ -25,6 +27,7 @@ class AdminController extends Controller
         //
         $casereportcounts = Casereport::count();
         $casereportLists = Casereport::paginate(10);
+        $regionalofficeLists = Regionaloffice::paginate(10);
         $personcounts = Person::count();
         //$casetypecounts = CaseReport::select(CaseReport::Raw('casetype_id, COUNT(*) as count'))
         //    ->groupBy('casetype_id');
@@ -35,8 +38,15 @@ class AdminController extends Controller
             ->select('casereports.*','casetypes.casetypeName as casetypeName')
             ->groupBy('casetypeName')
             ->get();
-        //dd($casetypes);
-        return view('admin.index', compact('casereportcounts','casereportLists','personcounts','casetypes'));
+        $region = Casereport::join('originoffices','casereports.originoffice_id','=','originoffices.id')
+            ->join('regionaloffices','originoffices.regionalOffice_id','=','regionaloffices.id')
+            ->select('casereports.*','regionaloffices.region_name as region_name')
+            //->groupBy('')
+            ->get();
+
+        $notifs = Notification::select('notifications.*')->orderBy('created_at', 'desc')->get();
+        //dd($region);
+        return view('admin.index', compact('casereportcounts','casereportLists','personcounts','casetypes','region', 'regionalofficeLists', 'notifs'));
     }
 
     /**

@@ -92,6 +92,13 @@ class ReportController extends Controller
 
         ]);
 
+        $request->user()->notifications()->create([
+            'subject' => $request->user()->name.' added a new report',
+            'body' => 'Case Number: '.$casereport_id,
+        ]);
+
+
+
         $casereportLists = Casereport::paginate(10);
         return view('reports.index', compact('casereportLists'));
     }
@@ -267,6 +274,11 @@ class ReportController extends Controller
             'notequalifier_id' => $note,
             'casereport_id' => $request->casereport_id,
             'cadtcondition_id' => $request->cadt_id,
+        ]);
+
+        $request->user()->notifications()->create([
+            'subject' => $request->user()->name.' added a new Person',
+            'body' => 'Name: '.$name.' to: Case No '.$casereport_id,
         ]);
 
         return redirect('reports/'. $request->casereport_id);
