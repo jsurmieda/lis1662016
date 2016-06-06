@@ -4,50 +4,35 @@
     <section id="news" class="container">
         <div class="center">
             <h2>Recent News</h2>
-            <p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
+            <p class="lead">Hala bira! UP!</p>
         </div>
 
         <div class="blog">
             <div class="row">
                  <div class="col-md-8">
+                 @foreach($NewsList as $news)
                     <div class="blog-item">
                         <div class="row">
                             <div class="col-xs-12 col-sm-2 text-center">
                                 <div class="entry-meta">
-                                    <span id="publish_date">07  NOV</span>
-                                    <span><i class="fa fa-user"></i> <a href="#">John Doe</a></span>
-                                    <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">2 Comments</a></span>
-                                    <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>
+                                    <span id="publish_date">{!! date('M j Y', strtotime($news->created_at)) !!}<br />
+                                    {!! date('g:i A', strtotime($news->created_at)) !!}</span>
+                                    <span><i class="fa fa-user"></i> <a href="#">{!! $news->user_id !!}</a></span>
+                                    <!--<span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">2 Comments</a></span>
+                                    <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>-->
                                 </div>
                             </div>
                                 
                             <div class="col-xs-12 col-sm-10 blog-content">
                                 <a href="#"><img class="img-responsive img-blog" src="images/blog/blog1.jpg" width="100%" alt="" /></a>
-                                <h2><a href="blog-item.html">Consequat bibendum quam liquam viverra</a></h2>
-                                <h3>Curabitur quis libero leo, pharetra mattis eros. Praesent consequat libero eget dolor convallis vel rhoncus magna scelerisque. Donec nisl ante, elementum eget posuere a, consectetur a metus. Proin a adipiscing sapien. Suspendisse vehicula porta lectus vel semper. Nullam sapien elit, lacinia eu tristique non.posuere at mi. Morbi at turpis id urna ullamcorper ullamcorper.</h3>
-                                <a class="btn btn-primary readmore" href="{{ url('/article') }}">Read More <i class="fa fa-angle-right"></i></a>
+                                <h2><a href="{{ url('/article/'.$news->id ) }}">{!! $news->articletitle !!}</a></h2>
+                                <h3>{!! str_limit($news->articlebody, 100, '...') !!}</h3>
+                                <a class="btn btn-primary readmore" href="{{ url('/article/'.$news->id ) }}">Read More <i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>    
                     </div><!--/.blog-item-->
-                        
-                    <div class="blog-item">
-                        <div class="row">
-                             <div class="col-sm-2 text-center">
-                                <div class="entry-meta"> 
-                                    <span id="publish_date">07  NOV</span>
-                                    <span><i class="fa fa-user"></i> <a href="#">John Doe</a></span>
-                                    <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">2 Comments</a></span>
-                                    <span><i class="fa fa-heart"></i><a href="#">56 Likes</a></span>
-                                </div>
-                            </div>
-                            <div class="col-sm-10 blog-content">
-                                <a href=""><img class="img-responsive img-blog" src="images/blog/blog2.jpg" width="100%" alt="" /></a>
-                                <h2><a href="blog-item.html">Consequat bibendum quam liquam viverra</a></h2>
-                                <h3>Curabitur quis libero leo, pharetra mattis eros. Praesent consequat libero eget dolor convallis vel rhoncus magna scelerisque. Donec nisl ante, elementum eget posuere a, consectetur a metus. Proin a adipiscing sapien. Suspendisse vehicula porta lectus vel semper. Nullam sapien elit, lacinia eu tristique non.posuere at mi. Morbi at turpis id urna ullamcorper ullamcorper.</h3>
-                                <a class="btn btn-primary readmore" href="{{ url('/article') }}">Read More <i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>    
-                    </div><!--/.blog-item-->
+                        @endforeach
+                    <!--/.blog-item-->
                         
                     <ul class="pagination pagination-lg">
                         <li><a href="#"><i class="fa fa-long-arrow-left"></i>Previous Page</a></li>
@@ -66,7 +51,7 @@
                                 <input type="text" class="form-control search_box" autocomplete="off" placeholder="Search Here">
                         </form>
                     </div><!--/.search-->
-    				
+    				<!-- RECENT COMMENTS
     				<div class="widget categories">
                         <h3>Recent Comments</h3>
                         <div class="row">
@@ -95,9 +80,9 @@
                                 
                             </div>
                         </div>                     
-                    </div><!--/.recent comments-->
+                    </div>/.recent comments-->
                      
-
+                    <!-- CATEGORIES
                     <div class="widget categories">
                         <h3>Categories</h3>
                         <div class="row">
@@ -110,10 +95,10 @@
                                 </ul>
                             </div>
                         </div>                     
-                    </div><!--/.categories-->
-    				
+                    </div>/.categories-->
+    				<!-- ARCHIVE
     				<div class="widget archieve">
-                        <h3>Archieve</h3>
+                        <h3>Archive</h3>
                         <div class="row">
                             <div class="col-sm-12">
                                 <ul class="blog_archieve">
@@ -124,8 +109,8 @@
                                 </ul>
                             </div>
                         </div>                     
-                    </div><!--/.archieve-->
-    				
+                    </div>/.archieve-->
+    				<!-- TAG CLOUD
                     <div class="widget tags">
                         <h3>Tag Cloud</h3>
                         <ul class="tag-cloud">
@@ -140,8 +125,8 @@
                             <li><a class="btn btn-xs btn-primary" href="#">Porche</a></li>
                             <li><a class="btn btn-xs btn-primary" href="#">Gadgets</a></li>
                         </ul>
-                    </div><!--/.tags-->
-    				
+                    </div>/.tags-->
+    				<!--BLOG GALLERY
     				<div class="widget blog_gallery">
                         <h3>Our Gallery</h3>
                         <ul class="sidebar-gallery">
@@ -152,7 +137,7 @@
                             <li><a href="#"><img src="images/blog/gallery5.png" alt="" /></a></li>
                             <li><a href="#"><img src="images/blog/gallery6.png" alt="" /></a></li>
                         </ul>
-                    </div><!--/.blog_gallery-->
+                    </div>/.blog_gallery-->
     			</aside>  
             </div><!--/.row-->
         </div>

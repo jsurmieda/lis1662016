@@ -15,7 +15,7 @@
                             <div class="row">  
                                 <div class="col-xs-12 col-sm-2 text-center">
                                     <div class="entry-meta">
-                                        <span><i class="fa fa-user"></i> <a href="#">By {!! $newsDetails->id !!}</a></span><br />
+                                        <span><i class="fa fa-user"></i> <a href="#">By {!! $newsDetails->user_id !!}</a></span><br />
                                         <span id="publish_date">{!! date('M j Y g:i A', strtotime($newsDetails->created_at)) !!}</span>
                                         <!--
                                         <span><i class="fa fa-comment"></i> <a href="blog-item.html#comments">2 Comments</a></span>

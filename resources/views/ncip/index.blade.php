@@ -9,16 +9,17 @@
                 <li data-target="#main-slider" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-            <?php $counting=0 ?>
+            <?php $counting=0; ?>
 @foreach($ArticlesCarousel as $carousel)
-    
-                 <div class="item active" style="background-image: url(images/slider/bg1.png)">
+        @if($counting<3)
+            <div class="item active" style="background-image: url(images/slider/bg1.png)">
+
                     <div class="container">
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
                                     <h1 class="animation animated-item-1">{!! $carousel->articletitle !!}</h1>
-                                    <h2 class="animation animated-item-2">{!! $carousel->articlebody !!}</h2>
+                                    <h2 class="animation animated-item-2">{!! str_limit($carousel->articlebody, 100, '...') !!}</h2>
                                     <a class="btn-slide animation animated-item-3" href="{{ url('/article/'.$carousel->id ) }}">Read More</a>
                                 </div>
                             </div>
@@ -33,10 +34,10 @@
                     </div>
                 </div><!--/.item-->
         
-    <? php $counting++; 
-    @if(!($counting<3)):
+    <? php $counting++; ?>
+    @else:
         break;
-    @endif ?>
+    @endif
 @endforeach<!--
                 <div class="item" style="background-image: url(images/slider/bg2.jpg)">
                     <div class="container">
@@ -93,21 +94,28 @@
                 <h2>Recent Projects and Programs</h2>
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
             </div>
-
             <div class="row">
+            <?php $counting=0 ?>
+@foreach($ArticlesCarousel as $carousel)
+            
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
                         <img class="img-responsive" src="images/portfolio/recent/item1.png" alt="">
                         <div class="overlay">
                             <div class="recent-work-inner">
-                                <h3><a href="#">Business theme</a> </h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                                <h3><a href="{{ url('/article/'.$carousel->id ) }}">{!! $carousel->articletitle !!}</a> </h3>
+                                <p>{!! str_limit($carousel->articlebody, 50, '...') !!}</p>
+                                <a class="preview" href="{{ url('/article/'.$carousel->id ) }}"><i class="fa fa-eye"></i> View</a>
                             </div> 
                         </div>
                     </div>
-                </div>   
-
+                </div>
+                <? php $counting++; 
+    @if(!($counting<6)):
+        break;
+    @endif ?>
+@endforeach
+<!--
                 <div class="col-xs-12 col-sm-4 col-md-3">
                     <div class="recent-work-wrap">
                         <img class="img-responsive" src="images/portfolio/recent/item2.png" alt="">
@@ -197,7 +205,7 @@
                             </div> 
                         </div>
                     </div>
-                </div>   
+                </div>-->   
             </div><!--/.row-->
 			<br>
 			<br>

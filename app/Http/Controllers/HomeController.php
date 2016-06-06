@@ -44,7 +44,8 @@ class HomeController extends Controller
 	
 	public function news()
     {
-        return view('ncip.news');
+        $NewsList = Article::where('mandatory','=','1')->orderBy('created_at','desc')->get();
+        return view('ncip.news', compact('NewsList'));
     }
 	
 	public function article($id)
