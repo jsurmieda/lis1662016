@@ -193,7 +193,7 @@ class ReportController extends Controller
         //$casetypes = Casetype::lists('casetypeName', 'id');
         //$relations = Relationship::lists('rel_type', 'id');
         //$offices = Originoffice::lists('csc_name', 'id');
-        $casereport = Casereport::findorFail($id);;
+        $casereport = Casereport::findorFail($id);
         $notetypes = Notequalifier::lists('noteType', 'id');
         return view('reports.addCaseNotes',compact('notetypes', 'casereport'));
     }
@@ -210,6 +210,67 @@ class ReportController extends Controller
         if($saveNotes):
             return redirect('reports/'. $request->casereport_id);
         endif;
+        
+    }
+
+    public function addPersons($id)
+    {
+        //dd($id);
+        //
+        // $tribes = Tribe::lists('tribeName', 'id');
+        //$casetypes = Casetype::lists('casetypeName', 'id');
+        //$relations = Relationship::lists('rel_type', 'id');
+        //$offices = Originoffice::lists('csc_name', 'id');
+        $casereport = Casereport::findorFail($id);
+        $tribes = Tribe::lists('tribeName', 'id');
+        $casetypes = Casetype::lists('casetypeName', 'id');
+        $relations = Relationship::lists('rel_type', 'id');
+        return view('reports.addPersons',compact('casereport','tribes', 'casetypes', 'relations'));
+    }
+
+    public function savePersons(Request $request)
+    {
+
+        $person = Person::where('lastname','=',$request->lastname)->where('firstname','=',$request->firstname)->where('middlename','=',$request->middlename)->select('persons.*')->get();
+        //dd($person->count());
+        if($person->isEmpty()):
+            //dd('walang laman!');
+            $request->user()->persons()->create([
+            'firstname' => $request->firstname,
+            'middlename' => $request->middlename,
+            'lastname' => $request->lastname,
+            'suffix' => $request->suffix,
+            'address' => $request->address,
+            'tribe_id' => $request->tribe_id,
+            ]);
+            $person_id = Person::orderBy('created_at', 'desc')->first()->id;
+        else:
+            $person_id = Person::where('lastname','=',$request->lastname)->where('firstname','=',$request->firstname)->where('middlename','=',$request->middlename)->first()->id;            
+        endif;
+
+        $name = $request->lastname.', '.$request->firstname.' '.$request->middlename.' '.$request->suffix;
+
+        $cadt_id = Tribe::where('id','=',$request->tribe_id)->first()->id;
+
+        $request->user()->casedescriptions()->create([
+            'person_id' => $person_id,
+            'relationship_id' => $request->rel_id,
+            'casereport_id' => $request->casereport_id,
+            'cadtcondition_id' => $request->$cadt_id,
+
+        ]);
+
+        $note = Notequalifier::where('noteType','=','Update')->first()->id;
+
+        $request->user()->casenotes()->create([
+            'notes' => 'Added '.$name.' to Persons Involved',
+            'notequalifier_id' => $note,
+            'casereport_id' => $request->casereport_id,
+            'cadtcondition_id' => $request->cadt_id,
+        ]);
+
+        return redirect('reports/'. $request->casereport_id);
+
         
     }
 }
