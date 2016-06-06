@@ -13,17 +13,18 @@ class Article extends Model
 	protected $fillable = [
 		'articletitle', 
 		'articlebody', 
+		'mandatory',
 		'articletypes_id', 
-		'users_id',
+		'user_id',
 	];
 
 	public function articletypes() 
 	{
-			return $this->belongsto('App\Articletype');
+			return $this->belongsTo('App\Articletype');
 	}
-/* REPLACE WITH APPROPRIATE NAMES FOR USERS */
+
 	public function users() 
 	{
-			return $this->hasMany('App\User');
+			return $this->belongsTo('App\User');
 	}
 }

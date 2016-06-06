@@ -65,6 +65,7 @@
                   </li>
                   <li><a><i class="fa fa-bars"></i> Articles <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
+                      <li><a href="{{ url('/articles') }}"><i class="fa fa-eye"></i>View Articles</a></li>
                       <li><a href="{{ url('/articles.create') }}"><i class="fa fa-pencil"></i>Post New Article</a></li>
                     </ul>
                   </li>

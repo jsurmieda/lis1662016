@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use App\Article;
 
 class HomeController extends Controller
 {
@@ -20,7 +21,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('ncip.index');
+        $ArticlesCarousel = Article::get();
+        return view('ncip.index', compact ('ArticlesCarousel'));
+        //return view('ncip.index');
     }
 	
 	public function about()
@@ -45,6 +48,11 @@ class HomeController extends Controller
 	
 	public function article()
     {
+        //$newsDetails = Article::findOrFail($id);
+
+        //$records = Article::find($id)->records;
+        #dd($records);
+        //return view('ncip.article', compact('newsDetails', 'records'));
         return view('ncip.article');
     }
 	
