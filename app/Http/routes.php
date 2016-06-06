@@ -18,7 +18,8 @@ Route::get('/', function () {
 Route::get('/home', 'HomeController@index');
 Route::get('/about', 'HomeController@about');
 Route::get('/news', 'HomeController@news');
-Route::get('/article', 'HomeController@article');
+//Route::get('/article/', 'HomeController@article');
+Route::get('/article/{article}', 'HomeController@article');
 
 //NCIP Forms
 Route::get('/forms.CADC', function () {

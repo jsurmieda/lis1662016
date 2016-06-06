@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <title>NCIP Website</title>
 
-  <!--favicon-->
+    <!--favicon-->
     <link rel="shortcut icon" href="{{{ asset('ncip.ico') }}}">
 
 	<!-- core CSS -->

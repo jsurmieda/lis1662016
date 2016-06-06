@@ -15,7 +15,7 @@ class CreateArticlesTable extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->increments('id');
             $table->string('articletitle');
-            $table->string('articlebody');
+            $table->text('articlebody');//text
             $table->boolean('mandatory')->default(0);
             $table->integer('articletype_id')->unsigned();
             //$table->foreign('articletype_id')->references('id')->on('articletypes')->onUpdate('cascade');

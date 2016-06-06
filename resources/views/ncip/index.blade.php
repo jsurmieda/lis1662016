@@ -9,29 +9,34 @@
                 <li data-target="#main-slider" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
+            <?php $counting=0 ?>
 @foreach($ArticlesCarousel as $carousel)
-    @if($carousel->mandatory):
-                 <div class="item active" style="background-image: url(images/slider/bg1.jpg)">
+    
+                 <div class="item active" style="background-image: url(images/slider/bg1.png)">
                     <div class="container">
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
                                     <h1 class="animation animated-item-1">{!! $carousel->articletitle !!}</h1>
                                     <h2 class="animation animated-item-2">{!! $carousel->articlebody !!}</h2>
-                                    <a class="btn-slide animation animated-item-3" href="{{ url('/article') }}">Read More</a>
+                                    <a class="btn-slide animation animated-item-3" href="{{ url('/article/'.$carousel->id ) }}">Read More</a>
                                 </div>
                             </div>
-
+<!-- yung poging lumad
                             <div class="col-sm-6 hidden-xs animation animated-item-4">
                                 <div class="slider-img">
                                     <img src="images/slider/img1.png" class="img-responsive">
                                 </div>
                             </div>
-
+-->
                         </div>
                     </div>
                 </div><!--/.item-->
-    @endif
+        
+    <? php $counting++; 
+    @if(!($counting<3)):
+        break;
+    @endif ?>
 @endforeach<!--
                 <div class="item" style="background-image: url(images/slider/bg2.jpg)">
                     <div class="container">
