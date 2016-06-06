@@ -10,6 +10,7 @@ use App\Casetype;
 use App\Casenote;
 use App\Casedescription;
 use App\Person;
+use App\Notequalifier;
 use App\Tribe;
 use App\Relationship;
 use App\Originoffice;
@@ -118,7 +119,7 @@ class ReportController extends Controller
             ->get();
         $casenotes=Casenote::where('casereport_id','=', $id)
             ->join('notequalifiers','casenotes.notequalifier_id','=','notequalifiers.id')
-            ->select('casenotes.*','casenotes.notes as notes', 'notequalifiers.noteType as noteType')
+            ->select('casenotes.*','casenotes.notes as notes', 'notequalifiers.noteType as noteType')->orderBy('created_at', 'desc')
             ->get();
         //dd($casenotes);
         return view('reports.show',compact('casereports','casedescriptions','casetypes','casenotes'));
@@ -176,5 +177,36 @@ class ReportController extends Controller
         //
         $caseReports=casereports::find($id)->caseReports;
         return view('reports.show',compact('caseReports'));
+    }
+
+     /**
+     * add new case notes
+     */
+    public function addCaseNotes($id)
+    {
+        //dd($id);
+        //
+        // $tribes = Tribe::lists('tribeName', 'id');
+        //$casetypes = Casetype::lists('casetypeName', 'id');
+        //$relations = Relationship::lists('rel_type', 'id');
+        //$offices = Originoffice::lists('csc_name', 'id');
+        $casereport = Casereport::findorFail($id);;
+        $notetypes = Notequalifier::lists('noteType', 'id');
+        return view('reports.addCaseNotes',compact('notetypes', 'casereport'));
+    }
+
+    public function saveCaseNotes(Request $request)
+    {
+        
+        $saveNotes = $request->user()->casenotes()->create([
+            'notes' => $request->notes,
+            'notequalifier_id' => $request->notetype_id,
+            'casereport_id' => $request->casereport_id,
+            'cadtcondition_id' => $request->cadt_id,
+        ]);
+        if($saveNotes):
+            return redirect('reports/'. $request->casereport_id);
+        endif;
+        
     }
 }

@@ -95,7 +95,7 @@
                           @foreach($casenotes as $casenote)
                             <div class="form-group">
                               <div class="input-group">
-                                <div class="input-group-addon">{!! date('F d, Y', strtotime($casenote->date))!!}</div>
+                                <div class="input-group-addon">{!! $casenote->created_at !!}</div>
                                 <input type="text" class="form-control" id="date" placeholder="{!! $casenote->notes!!}" readonly>
                                 <div class="input-group-addon">{!! $casenote->noteType!!}</div>
                               </div>
@@ -104,7 +104,7 @@
                           </td>
                         </tr>
                       </tbody>
-                      <a onclick="addCaseNotes()" }}"><i class="fa fa-plus"></i> Add New Case Notes</a>
+                      <a href="{{ url('reports/'. $casereports->id .'/addCaseNotes') }}"><i class="fa fa-plus"></i> New Updates</a>
                     </table>
                   </div>
                 </div>

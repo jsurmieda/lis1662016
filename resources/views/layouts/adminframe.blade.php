@@ -352,13 +352,6 @@
     }
     </script>
     <!-- /add Casenotes -->
-    <!-- add PersonsInvolved -->
-    <script>
-    function addPersonsInvolved() {
-        alert("Add Person Involved Form Here!");
-    }
-    </script>
-    <!-- /add PersonsInvolved -->
     <!-- /Time -->
     <script>
     function startTime() {

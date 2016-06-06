@@ -43,4 +43,9 @@ class User extends Authenticatable
 	{
 		return $this->hasMany('App\Casedescription');
 	}
+
+		public function Casenotes()
+	{
+		return $this->hasMany('App\Casenote');
+	}
 }
