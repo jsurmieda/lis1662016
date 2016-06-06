@@ -5,7 +5,7 @@
     <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Post New Article</h3>
+                <h3>Edit Article</h3>
               </div>
               
               <!-- THIS IS A SEARCH BAR -->
@@ -22,16 +22,16 @@
             </div>
             <div class="clearfix"></div>
             <!-- FILE UPLOADER PERO IDK HOW THIS WORKS -->
-            {!! Form::open([
-                    'url'=>'articles',
-                    'class'=>'form-horizontal',
-                  ]) 
-              !!}
+            {!! Form::model($articleInfo, [
+				'route'=>array('articles.update', $articleInfo->id),
+				'class'=>'form-horizontal',
+				'method'=>'put',
+				]) !!}
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Post New Article</h2>
+                    <h2>Edit Article</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li>
                         <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -62,46 +62,27 @@
                         ]) 
                       !!}
                     </div>
-                  </div>
-                  <div class="form-group">
-                   {!! Form::label('articletype', 'Type of article *', 
-                      ['class'=>'control-label col-md-3 col-sm-3 col-xs-12',
-                      ]) 
-                    !!}
-                    
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                      {!! Form::select('articletype', [
-                          '1' => 'IP-related News', 
-                          '2' => 'Announcement',
-                          '3' => 'Classified',
-                          '4' => 'Programs and Activities' ], '1', [
-                        'class'=>'form-control',
-                        'required'=>'required',
-                      ]);
-                    !!}
-                    </div>
-                  </div>
+                  </div><br /><br />
                   <div class="form-group">
 
-                  {!! Form::label('mandatory', 'Publish? *', 
+                  {!! Form::label('mandatory', 'Show on homepage *', 
                       ['class'=>'control-label col-md-3 col-sm-3 col-xs-12',
                       ]) 
                   !!}
                     
                     <div class="col-md-6 col-sm-6 col-xs-12">
-
-                    {!! Form::select('mandatory', ['0' => 'No', '1' => 'Yes'], '0', [
+                      {!! Form::select('mandatory', ['0' => 'No', '1' => 'Yes'], $articleInfo->mandatory, [
                         'class'=>'form-control',
                         'required'=>'required',
                       ]);
                     !!}
                     </div>
                   </div>
-
+                  <br />
                   <div class="x_content">
-                    <p>Note that selecting "Yes" means that the article is FINAL and ready to be accessed by mainstream media.</p>
+                  <p>Note that selecting "Yes" means that the article is FINAL and ready to be accessed by mainstream media.</p>
                   </div>
-                  
+                  <br />
                   <div class="form-group">
                     {!! Form::label('articlebody', 'Article Text *', ['class'=>'col-md-3 col-sm-2 col-xs-12 control-label']) !!}
                     <div class="col-sm-5">
@@ -112,22 +93,23 @@
                       !!}
                     </div>
                   </div>
-                  {!! Form::hidden('user_id', Auth::user()->id ) !!}
+                  
 
                 <div class="x_content">
-                    <p>As you create the article, please make sure that the identities of people involved are kept confidential. The usage of aliases is highly recommended.</p>
+                    
+
 <!--
                     <form action="form_upload.html" class="dropzone">
                       
-                    </form> this must be sent to some php file na naguupload. 
+                    </form> this must be sent to some php file na naguupload. -->
                     
-                    <p>Drag multiple files to the box below for multi upload or click to select files. This is for demonstration purposes only, the files are not uploaded to any server.</p>-->
+                    <p>Drag multiple files to the box below for multi upload or click to select files. This is for demonstration purposes only, the files are not uploaded to any server.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          {!! Form::submit('Post Article',[
+          {!! Form::submit('Update Article',[
               'class'=>'btn btn-primary col-sm-12'
               ])
           !!}

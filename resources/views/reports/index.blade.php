@@ -25,6 +25,13 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
+
+                  @if (session('status'))
+                  <div class= 'alert alert-danger'>
+                    {{session('status')}}
+                  </div>
+                  @endif
+
                     <h2>Case Reports Masterlist</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -60,7 +67,7 @@
                           	<a href="{{ url('reports/'.$casereport->id) }}"><i class="fa fa-eye"></i></a>
                             <a href="{{ url('reports/'.$casereport->id.'/edit') }}"><i class="fa fa-pencil"></i></a>
                            {{ Form::open(['method' => 'DELETE', 'action' => ['ReportController@destroy', $casereport->id]]) }} 
-                           {{ Form::submit('Delete',['class' => 'fa fa-trash']) }} 
+                           {{ Form::submit('Delete', ['class' => 'fa fa-btn fa-trash']) }} 
                            {{ Form::close() }}
                           </td>
                         </tr>

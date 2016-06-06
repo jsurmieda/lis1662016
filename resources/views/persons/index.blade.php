@@ -33,6 +33,11 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
+                  @if (session('status'))
+                  <div class= 'alert alert-danger'>
+                    {{session('status')}}
+                  </div>
+                  @endif
                     <p class="text-muted font-13 m-b-30">
                       Masterlist of registered Indigenous People in your office.
                     </p>
@@ -56,7 +61,7 @@
                           	<a href="{{ url('persons/'.$person->id) }}"><i class="fa fa-eye"></i></a>
                             <a href="{{ url('reports/'.$person->id.'/edit') }}"><i class="fa fa-pencil"></i></a>
                            {{ Form::open(['method' => 'DELETE', 'action' => ['PersonController@destroy', $person->id]]) }} 
-                           {{ Form::submit('Delete', ['class' => 'fa fa-trash']) }} 
+                           {{ Form::submit('Delete', ['class' => 'fa fa-btn fa-trash']) }} 
                            {{ Form::close() }}
                           </td>
                         </tr>

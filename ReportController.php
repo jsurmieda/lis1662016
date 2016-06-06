@@ -7,10 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Casereport;
 use App\Casetype;
-use App\Casenote;
 use App\Casedescription;
 use App\Person;
-use App\Notequalifier;
 use App\Tribe;
 use App\Relationship;
 use App\Originoffice;
@@ -88,8 +86,6 @@ class ReportController extends Controller
             'person_id' => $person_id,
             'relationship_id' => $request->rel_id,
             'casereport_id' => $casereport_id,
-            'cadtcondition_id' => $cadt_id,
-
         ]);
 
         $casereportLists = Casereport::paginate(10);
@@ -107,24 +103,19 @@ class ReportController extends Controller
         //
 
         //$casereports = Casereport::findorFail($id)
-        $casetypes = Casereport::where('casereports.id','=', $id)
-            ->join('casetypes','casereports.casetype_id','=','casetypes.id')
-            ->select('casereports.*','casetypes.casetypeName as casetypeName')
-            ->get();
         $casereports = Casereport::findorFail($id);
+        //$casetypes = CaseType::where('casereport_id','=', $id)->join('casetypes','casereports.casetype_id','=','casetypes.id')
+        //->select('casereports.*','casetypes.casetypeName as casetypeName')
+        //->get();
         //$casetypes=Casetype::where($id->casetype_id,'=','casetypes.id')->get();
         //dd($casetypes);
         $casedescriptions=Casedescription::where('casereport_id','=', $id)
             ->join('persons','casedescriptions.person_id','=','persons.id')
             ->join('relationships','casedescriptions.relationship_id','=','relationships.id')
-            ->select('casedescriptions.*','persons.lastname as lastname','persons.firstname as firstname' ,'persons.middlename as middlename','persons.suffix as suffix','relationships.rel_type as rel_type')
+            ->select('casedescriptions.*','persons.lastname as lastname','persons.firstname as firstname' ,'persons.middlename as middlename','relationships.rel_type as rel_type')
             ->get();
-        $casenotes=Casenote::where('casereport_id','=', $id)
-            ->join('notequalifiers','casenotes.notequalifier_id','=','notequalifiers.id')
-            ->select('casenotes.*','casenotes.notes as notes', 'notequalifiers.noteType as noteType')->orderBy('created_at', 'desc')
-            ->get();
-        //dd($casenotes);
-        return view('reports.show',compact('casereports','casedescriptions','casetypes','casenotes'));
+        //dd($persons);
+        return view('reports.show',compact('casereports','casedescriptions'));
     }
 
     /**
@@ -136,7 +127,6 @@ class ReportController extends Controller
     public function edit($id)
     {
         //
-      
     }
 
     /**
@@ -165,7 +155,7 @@ class ReportController extends Controller
 
         if($deleteCasereport):
             return redirect('reports')
-            ->with('status', 'Entry Deleted!');
+            ->with('status', 'Entry deleted!');
         else:
             return redirect('reports')
             ->with('status', 'Error!!');
@@ -180,36 +170,5 @@ class ReportController extends Controller
         //
         $caseReports=casereports::find($id)->caseReports;
         return view('reports.show',compact('caseReports'));
-    }
-
-     /**
-     * add new case notes
-     */
-    public function addCaseNotes($id)
-    {
-        //dd($id);
-        //
-        // $tribes = Tribe::lists('tribeName', 'id');
-        //$casetypes = Casetype::lists('casetypeName', 'id');
-        //$relations = Relationship::lists('rel_type', 'id');
-        //$offices = Originoffice::lists('csc_name', 'id');
-        $casereport = Casereport::findorFail($id);;
-        $notetypes = Notequalifier::lists('noteType', 'id');
-        return view('reports.addCaseNotes',compact('notetypes', 'casereport'));
-    }
-
-    public function saveCaseNotes(Request $request)
-    {
-        
-        $saveNotes = $request->user()->casenotes()->create([
-            'notes' => $request->notes,
-            'notequalifier_id' => $request->notetype_id,
-            'casereport_id' => $request->casereport_id,
-            'cadtcondition_id' => $request->cadt_id,
-        ]);
-        if($saveNotes):
-            return redirect('reports/'. $request->casereport_id);
-        endif;
-        
     }
 }

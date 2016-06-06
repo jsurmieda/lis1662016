@@ -45,4 +45,10 @@ class Casereport extends Model
 	{
 		return $this->belongsTo('App\User');
 	}
+
+    
+    
+
+
+
 }

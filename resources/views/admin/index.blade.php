@@ -169,7 +169,7 @@
                             </td>
                           </tr>
                           @endforeach
-                      </td>
+                      </tbody>
                   </table>
                 </div>
               </div>

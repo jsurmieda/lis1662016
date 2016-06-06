@@ -3,14 +3,17 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Person extends Model
 {
     //
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
 
     protected $table = 'persons';
     protected $fillable = [
-    	'firstname','middlename','lastname','suffix','address','tribe_id',
+    	'firstname','middlename','lastname','suffix','address','tribe_id', 'user_id',
     	];
 
     public function Casedescription()
