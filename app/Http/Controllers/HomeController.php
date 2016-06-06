@@ -21,7 +21,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $ArticlesCarousel = Article::get();
+        $ArticlesCarousel = Article::where('mandatory','=','1')->orderBy('created_at','desc')->get();
+        dd($ArticlesCarousel);
         return view('ncip.index', compact ('ArticlesCarousel'));
         //return view('ncip.index');
     }
